@@ -1,0 +1,9 @@
+/* src/pages/Products/MiniPlanters.css */
+.mini-planters {
+    padding: 16px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+}
