@@ -453,7 +453,7 @@ const products = [
         price: 3246.50,  
         prices: {
             "Medium H=65cm W=36cm": 3246.50,
-            "Large H=80cm W=36cm":  3610.00
+            "Large H=80cm W=36cm": 3610.00
         },
         images: {
             "Midnight Sky Plain": "https://cdn.shopify.com/s/files/1/0793/4463/2097/products/MidnightSky_1f8539e1-f0db-4e51-a45d-92759a2b906f.png?v=1695150514",
@@ -480,7 +480,6 @@ const products = [
         ],
         category: "Fiberglass Planters"
     },
-    
     {
         id: 19,
         handle: "victoria-fiberglass-planter",
@@ -489,7 +488,7 @@ const products = [
         price: 3246.50,  
         prices: {
             "Medium H=36cm x W=39.5cm": 1260.00,
-            "Large H=43cm W=46.5cm":  1775.00
+            "Large H=43cm W=46.5cm": 1775.00
         },
         images: {
             "Midnight Sky Plain": "https://cdn.shopify.com/s/files/1/0793/4463/2097/products/MidnightSky_5c1e3665-8b71-432c-809c-87a52fcbc479.png?v=1695230553",
@@ -516,6 +515,7 @@ const products = [
         ],
         category: "Fiberglass Planters"
     },
+    
 
     {
         id: 20,

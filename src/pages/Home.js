@@ -13,7 +13,7 @@ const Home = () => {
                 <div className="home-content">
                     {/* Left Image */}
                     <div className="left-image-container">
-                        <img src={leftImage} alt="Left side image" className="left-image" />
+                        <img src={leftImage} alt="Decorative plant arrangement on the left" className="left-image" />
                     </div>
 
                     {/* Text Section */}
@@ -33,12 +33,12 @@ const Home = () => {
 
                     {/* Right Image */}
                     <div className="right-image-container">
-                        <img src={rightImage} alt="Right side image" className="right-image" />
+                        <img src={rightImage} alt="Decorative plant arrangement on the right" className="right-image" />
                     </div>
                 </div>
 
                 {/* Palette Banner Image below the text and images */}
-                <img src={paletteImage} alt="Palette Banner" className="home-banner" />
+                <img src={paletteImage} alt="Colorful palette of planters" className="home-banner" />
             </main>
             <Footer />
         </>
