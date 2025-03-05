@@ -10,15 +10,16 @@ import MiniPlanters from "./pages/Products/MiniPlanters";
 import FiberglassPlanters from "./pages/Products/FiberglassPlanters";
 import CeramicPlanters from "./pages/Products/CeramicPlanters";
 import ProductPage from "./pages/Products/ProductPage";
-import Cart from "./pages/cart"; // Import Cart Page
+import Cart from "./pages/cart";
+import Checkout from "./pages/Checkout"; // Import the Checkout page
 import Header from "./components/Header";
-import { CartProvider } from "./context/CartContext"; // Import Cart Context Provider
+import { CartProvider } from "./context/CartContext";
 
 import "./App.css";
 
 function App() {
     return (
-        <CartProvider> {/* Wrap the entire app with CartProvider */}
+        <CartProvider>
             <Router>
                 <Header />
                 <Routes>
@@ -31,7 +32,8 @@ function App() {
                     <Route path="/products/fiberglass-planters" element={<FiberglassPlanters />} />
                     <Route path="/products/ceramic-planters" element={<CeramicPlanters />} />
                     <Route path="/products/:handle" element={<ProductPage />} />
-                    <Route path="/cart" element={<Cart />} /> {/* Add the cart route */}
+                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/checkout" element={<Checkout />} /> {/* Add the Checkout route */}
                 </Routes>
             </Router>
         </CartProvider>

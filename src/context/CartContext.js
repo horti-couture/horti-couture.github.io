@@ -1,3 +1,4 @@
+// src/context/CartContext.js
 import React, { createContext, useState, useContext } from "react";
 
 export const CartContext = createContext();
@@ -21,14 +22,17 @@ export const CartProvider = ({ children }) => {
         setCart(cart.filter((item) => item.id !== id));
     };
 
+    const clearCart = () => {
+        setCart([]);
+    };
+
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+        <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>
             {children}
         </CartContext.Provider>
     );
 };
 
-// ✅ Add the `useCart` Hook
 export const useCart = () => {
     return useContext(CartContext);
 };
