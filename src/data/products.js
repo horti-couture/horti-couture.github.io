@@ -405,7 +405,7 @@ const products = [
             },
             {
                 name: "Size",
-                values: ["Small H=50cm W=38cm L100=cm", "Medium H=65cm W=38cm L100=cm", "Large H=80cm W=38cm L100=cm"]
+                values: ["Small H=50cm W=38cm L=100=cm", "Medium H=65cm W=38cm L=100=cm", "Large H=80cm W=38cm L=100=cm"]
             }
         ],
         category: "Fiberglass Planters"
