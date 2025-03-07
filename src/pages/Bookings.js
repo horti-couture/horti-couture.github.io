@@ -16,6 +16,8 @@ const Bookings = () => {
     const [loading, setLoading] = useState(false);
     const [statusMessage, setStatusMessage] = useState("");
 
+    const backendUrl = "https://your-render-backend.onrender.com"; // Replace with your Render backend URL
+
     const timeSlots = [
         "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM",
         "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM",
@@ -32,7 +34,7 @@ const Bookings = () => {
         setStatusMessage("Submitting booking... Please wait");
 
         try {
-            const response = await fetch("http://localhost:10000/book-service", {
+            const response = await fetch(`${backendUrl}/book-service`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
@@ -71,7 +73,7 @@ const Bookings = () => {
                 <select name="service" value={formData.service} onChange={handleChange}>
                     <option value="Plant Advice">Plant Advice - R250</option>
                     <option value="Land Scaping">Land Scaping - R450</option>
-                    <option value="Area Consoltation">Area Consoltation - R650</option>
+                    <option value="Area Consultation">Area Consultation - R650</option>
                 </select>
 
                 <label>Select a Date:</label>

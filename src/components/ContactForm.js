@@ -5,6 +5,8 @@ const ContactForm = () => {
     const [loading, setLoading] = useState(false);
     const [statusMessage, setStatusMessage] = useState("");
 
+    const backendUrl = "https://your-render-backend.onrender.com"; // Replace with your Render backend URL
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
@@ -15,7 +17,7 @@ const ContactForm = () => {
         setStatusMessage("Sending... Please wait");
 
         try {
-            const response = await fetch("http://localhost:10000/send-email", {
+            const response = await fetch(`${backendUrl}/send-email`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
