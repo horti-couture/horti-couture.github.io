@@ -14,7 +14,7 @@ const CheckoutForm = () => {
         setLoading(true);
 
         try {
-            const response = await fetch("https://your-render-backend.onrender.com/initialize-payment", {
+            const response = await fetch("https://backend-7dm6.onrender.com/initialize-payment", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, amount: total }),

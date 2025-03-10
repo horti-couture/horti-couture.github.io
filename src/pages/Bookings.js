@@ -16,7 +16,7 @@ const Bookings = () => {
     const [loading, setLoading] = useState(false);
     const [statusMessage, setStatusMessage] = useState("");
 
-    const backendUrl = "https://your-render-backend.onrender.com"; // Replace with your Render backend URL
+    const backendUrl = "https://backend-7dm6.onrender.com"; // Replace with your Render backend URL
 
     const timeSlots = [
         "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM",

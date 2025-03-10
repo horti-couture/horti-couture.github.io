@@ -5,7 +5,7 @@ const ContactForm = () => {
     const [loading, setLoading] = useState(false);
     const [statusMessage, setStatusMessage] = useState("");
 
-    const backendUrl = "https://your-render-backend.onrender.com"; // Replace with your Render backend URL
+    const backendUrl = "https://backend-7dm6.onrender.com"; // Replace with your Render backend URL
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
