@@ -14,16 +14,25 @@ const CheckoutForm = () => {
         setLoading(true);
 
         try {
-            const response = await fetch("https://backend-7dm6.onrender.com/initialize-payment", {
+            // Step 1: Initialize Paystack payment
+            const paymentResponse = await fetch("https://backend-7dm6.onrender.com/initialize-payment", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, amount: total }),
             });
 
-            const { data } = await response.json();
+            const paymentData = await paymentResponse.json();
 
-            if (data && data.authorization_url) {
-                window.location.href = data.authorization_url; // Redirect to Paystack
+            if (paymentData.data && paymentData.data.authorization_url) {
+                // Step 2: Redirect to Paystack for payment
+                window.location.href = paymentData.data.authorization_url;
+
+                // Step 3: After successful payment, send checkout details to the server
+                await fetch("https://backend-7dm6.onrender.com/checkout", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email, cart, total, shippingAddress }),
+                });
             } else {
                 setStatusMessage("Failed to initialize payment.");
             }
@@ -38,10 +47,19 @@ const CheckoutForm = () => {
         <div>
             <h2>Checkout</h2>
             <label>Email:</label>
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+            <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+            />
 
             <label>Shipping Address:</label>
-            <textarea value={shippingAddress} onChange={(e) => setShippingAddress(e.target.value)} required />
+            <textarea
+                value={shippingAddress}
+                onChange={(e) => setShippingAddress(e.target.value)}
+                required
+            />
 
             <h3>Total: R{total.toFixed(2)}</h3>
 
