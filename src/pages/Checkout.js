@@ -8,7 +8,7 @@ const Checkout = () => {
         name: "",
         email: "",
         phone: "",
-        address: "", // Changed from `shippingAddress` to `address`
+        shippingAddress: "",
     });
     const [shippingOption, setShippingOption] = useState("pickup");
     const [paymentMethod, setPaymentMethod] = useState("paystack");
@@ -24,7 +24,7 @@ const Checkout = () => {
                 name: storedUserData.name || "",
                 email: storedUserData.email || "",
                 phone: storedUserData.phone || "",
-                address: storedUserData.address || "", // Map `address` to `address`
+                shippingAddress: storedUserData.address || "", // Map `address` to `shippingAddress`
             });
         }
     }, []);
@@ -55,7 +55,7 @@ const Checkout = () => {
                         email: formData.email,
                         cart: cart, // Send the cart as-is
                         total: grandTotal,
-                        shippingAddress: formData.address, // Use `address` here
+                        shippingAddress: formData.shippingAddress,
                         shippingOption,
                         paymentMethod,
                     }),
@@ -81,7 +81,7 @@ const Checkout = () => {
                     email: formData.email,
                     cart: cart, // Send the cart as-is
                     total: grandTotal,
-                    shippingAddress: formData.address, // Use `address` here
+                    shippingAddress: formData.shippingAddress,
                     shippingOption,
                     paymentMethod: "EFT",
                 }),
@@ -106,6 +106,7 @@ const Checkout = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
+                    autoComplete="name" // Standard autocomplete for name
                     required
                 />
             </div>
@@ -116,6 +117,7 @@ const Checkout = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    autoComplete="email" // Standard autocomplete for email
                     required
                 />
             </div>
@@ -126,6 +128,7 @@ const Checkout = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
+                    autoComplete="tel" // Standard autocomplete for phone
                     required
                 />
             </div>
@@ -133,9 +136,10 @@ const Checkout = () => {
                 <label>Shipping Address:</label>
                 <input
                     type="text"
-                    name="address" // Changed from `shippingAddress` to `address`
-                    value={formData.address}
+                    name="shippingAddress"
+                    value={formData.shippingAddress}
                     onChange={handleChange}
+                    autoComplete="address-line1" // Standard autocomplete for address
                     required
                 />
             </div>
