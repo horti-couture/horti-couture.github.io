@@ -53,7 +53,7 @@ const Checkout = () => {
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
                         email: formData.email,
-                        cart: cart, // Send the cart as-is without overriding
+                        cart: cart, // Send the cart as-is
                         total: grandTotal,
                         shippingAddress: formData.shippingAddress,
                         shippingOption,
@@ -79,7 +79,7 @@ const Checkout = () => {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     email: formData.email,
-                    cart: cart, // Send the cart as-is without overriding
+                    cart: cart, // Send the cart as-is
                     total: grandTotal,
                     shippingAddress: formData.shippingAddress,
                     shippingOption,
@@ -131,7 +131,8 @@ const Checkout = () => {
             </div>
             <div className="form-group">
                 <label>Shipping Address:</label>
-                <textarea
+                <input
+                    type="text"
                     name="shippingAddress"
                     value={formData.shippingAddress}
                     onChange={handleChange}
