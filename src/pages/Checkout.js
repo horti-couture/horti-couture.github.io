@@ -53,11 +53,7 @@ const Checkout = () => {
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
                         email: formData.email,
-                        cart: cart.map(item => ({
-                            ...item,
-                            lineArt: item.lineArt || "Plain",
-                            stand: item.stand || "No Stand",
-                        })),
+                        cart: cart, // Send the cart as-is without overriding
                         total: grandTotal,
                         shippingAddress: formData.shippingAddress,
                         shippingOption,
@@ -83,11 +79,7 @@ const Checkout = () => {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     email: formData.email,
-                    cart: cart.map(item => ({
-                        ...item,
-                        lineArt: item.lineArt || "Plain",
-                        stand: item.stand || "No Stand",
-                    })),
+                    cart: cart, // Send the cart as-is without overriding
                     total: grandTotal,
                     shippingAddress: formData.shippingAddress,
                     shippingOption,
