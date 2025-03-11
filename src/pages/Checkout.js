@@ -8,7 +8,7 @@ const Checkout = () => {
         name: "",
         email: "",
         phone: "",
-        shippingAddress: "",
+        address: "", // Changed from `shippingAddress` to `address`
     });
     const [shippingOption, setShippingOption] = useState("pickup");
     const [paymentMethod, setPaymentMethod] = useState("paystack");
@@ -24,7 +24,7 @@ const Checkout = () => {
                 name: storedUserData.name || "",
                 email: storedUserData.email || "",
                 phone: storedUserData.phone || "",
-                shippingAddress: storedUserData.address || "", // Map `address` to `shippingAddress`
+                address: storedUserData.address || "", // Map `address` to `address`
             });
         }
     }, []);
@@ -55,7 +55,7 @@ const Checkout = () => {
                         email: formData.email,
                         cart: cart, // Send the cart as-is
                         total: grandTotal,
-                        shippingAddress: formData.shippingAddress,
+                        shippingAddress: formData.address, // Use `address` here
                         shippingOption,
                         paymentMethod,
                     }),
@@ -81,7 +81,7 @@ const Checkout = () => {
                     email: formData.email,
                     cart: cart, // Send the cart as-is
                     total: grandTotal,
-                    shippingAddress: formData.shippingAddress,
+                    shippingAddress: formData.address, // Use `address` here
                     shippingOption,
                     paymentMethod: "EFT",
                 }),
@@ -133,8 +133,8 @@ const Checkout = () => {
                 <label>Shipping Address:</label>
                 <input
                     type="text"
-                    name="shippingAddress"
-                    value={formData.shippingAddress}
+                    name="address" // Changed from `shippingAddress` to `address`
+                    value={formData.address}
                     onChange={handleChange}
                     required
                 />
