@@ -1,7 +1,8 @@
+// src/pages/cart.js
 import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
-import "../styles/Cart.css";
+import "../styles/Cart.css"; // Import the Cart CSS
 
 const Cart = () => {
     const { cart, removeFromCart, clearCart } = useContext(CartContext);
@@ -18,10 +19,6 @@ const Cart = () => {
                         {cart.map((item) => (
                             <li key={item.id}>
                                 {item.title} - {item.quantity} x R{item.price.toFixed(2)}
-                                {item.color && <p>Color: {item.color}</p>}
-                                {item.size && <p>Size: {item.size}</p>}
-                                {item.lineArt && <p>Line Art: {item.lineArt}</p>}
-                                {item.stand && <p>Stand: {item.stand}</p>}
                                 <button onClick={() => removeFromCart(item.id)}>Remove</button>
                             </li>
                         ))}
