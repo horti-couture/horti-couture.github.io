@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useCart } from "../context/CartContext";
-import { useNavigate } from "react-router-dom"; // For redirecting after purchase
+import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
     const { cart, clearCart } = useCart();
@@ -8,13 +8,13 @@ const Checkout = () => {
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
     const [shippingAddress, setShippingAddress] = useState("");
-    const [shippingOption, setShippingOption] = useState("pickup"); // Default to pickup
-    const [paymentMethod, setPaymentMethod] = useState("paystack"); // Default to Paystack
+    const [shippingOption, setShippingOption] = useState("pickup");
+    const [paymentMethod, setPaymentMethod] = useState("paystack");
     const [loading, setLoading] = useState(false);
     const [statusMessage, setStatusMessage] = useState("");
     const navigate = useNavigate();
 
-    // ✅ Auto-fill fields from local storage (or session data)
+    // Auto-fill fields from local storage
     useEffect(() => {
         const storedUserData = JSON.parse(localStorage.getItem("userData"));
         if (storedUserData) {
@@ -43,7 +43,18 @@ const Checkout = () => {
                 await fetch("https://backend-7dm6.onrender.com/checkout", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ email, cart, total: grandTotal, shippingAddress, shippingOption, paymentMethod }),
+                    body: JSON.stringify({
+                        email,
+                        cart: cart.map(item => ({
+                            ...item,
+                            lineArt: item.lineArt || "Plain",
+                            stand: item.stand || "No Stand",
+                        })),
+                        total: grandTotal,
+                        shippingAddress,
+                        shippingOption,
+                        paymentMethod,
+                    }),
                 });
             } else {
                 setStatusMessage("Failed to initialize payment.");
@@ -52,7 +63,7 @@ const Checkout = () => {
             setStatusMessage("Error: " + error.message);
         } finally {
             setLoading(false);
-            navigate("/"); // Redirect to home page
+            navigate("/");
         }
     };
 
@@ -62,11 +73,22 @@ const Checkout = () => {
             await fetch("https://backend-7dm6.onrender.com/checkout", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email, cart, total: grandTotal, shippingAddress, shippingOption, paymentMethod: "EFT" }),
+                body: JSON.stringify({
+                    email,
+                    cart: cart.map(item => ({
+                        ...item,
+                        lineArt: item.lineArt || "Plain",
+                        stand: item.stand || "No Stand",
+                    })),
+                    total: grandTotal,
+                    shippingAddress,
+                    shippingOption,
+                    paymentMethod: "EFT",
+                }),
             });
             setStatusMessage("Order placed successfully! Please make an EFT payment to our bank account.");
             clearCart();
-            navigate("/"); // Redirect to home page
+            navigate("/");
         } catch (error) {
             setStatusMessage("Error: " + error.message);
         } finally {
