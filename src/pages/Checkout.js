@@ -24,7 +24,7 @@ const Checkout = () => {
                 name: storedUserData.name || "",
                 email: storedUserData.email || "",
                 phone: storedUserData.phone || "",
-                shippingAddress: storedUserData.address || "",
+                shippingAddress: storedUserData.address || "", // Map `address` to `shippingAddress`
             });
         }
     }, []);
@@ -106,6 +106,7 @@ const Checkout = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
+                    autoComplete="name" // Standard autocomplete for name
                     required
                 />
             </div>
@@ -116,6 +117,7 @@ const Checkout = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    autoComplete="email" // Standard autocomplete for email
                     required
                 />
             </div>
@@ -126,6 +128,7 @@ const Checkout = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
+                    autoComplete="tel" // Standard autocomplete for phone
                     required
                 />
             </div>
@@ -136,6 +139,7 @@ const Checkout = () => {
                     name="shippingAddress"
                     value={formData.shippingAddress}
                     onChange={handleChange}
+                    autoComplete="address-line1" // Standard autocomplete for address
                     required
                 />
             </div>
