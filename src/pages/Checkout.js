@@ -4,10 +4,12 @@ import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
     const { cart, clearCart } = useCart();
-    const [email, setEmail] = useState("");
-    const [name, setName] = useState("");
-    const [phone, setPhone] = useState("");
-    const [shippingAddress, setShippingAddress] = useState("");
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        shippingAddress: "",
+    });
     const [shippingOption, setShippingOption] = useState("pickup");
     const [paymentMethod, setPaymentMethod] = useState("paystack");
     const [loading, setLoading] = useState(false);
@@ -18,12 +20,18 @@ const Checkout = () => {
     useEffect(() => {
         const storedUserData = JSON.parse(localStorage.getItem("userData"));
         if (storedUserData) {
-            setName(storedUserData.name || "");
-            setEmail(storedUserData.email || "");
-            setPhone(storedUserData.phone || "");
-            setShippingAddress(storedUserData.address || "");
+            setFormData({
+                name: storedUserData.name || "",
+                email: storedUserData.email || "",
+                phone: storedUserData.phone || "",
+                shippingAddress: storedUserData.address || "",
+            });
         }
     }, []);
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
 
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     const shippingFee = shippingOption === "courier" ? 120 : 0;
@@ -35,7 +43,7 @@ const Checkout = () => {
             const paymentResponse = await fetch("https://backend-7dm6.onrender.com/initialize-payment", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email, amount: grandTotal }),
+                body: JSON.stringify({ email: formData.email, amount: grandTotal }),
             });
             const paymentData = await paymentResponse.json();
             if (paymentData.data && paymentData.data.authorization_url) {
@@ -44,14 +52,14 @@ const Checkout = () => {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
-                        email,
+                        email: formData.email,
                         cart: cart.map(item => ({
                             ...item,
                             lineArt: item.lineArt || "Plain",
                             stand: item.stand || "No Stand",
                         })),
                         total: grandTotal,
-                        shippingAddress,
+                        shippingAddress: formData.shippingAddress,
                         shippingOption,
                         paymentMethod,
                     }),
@@ -74,14 +82,14 @@ const Checkout = () => {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    email,
+                    email: formData.email,
                     cart: cart.map(item => ({
                         ...item,
                         lineArt: item.lineArt || "Plain",
                         stand: item.stand || "No Stand",
                     })),
                     total: grandTotal,
-                    shippingAddress,
+                    shippingAddress: formData.shippingAddress,
                     shippingOption,
                     paymentMethod: "EFT",
                 }),
@@ -99,52 +107,84 @@ const Checkout = () => {
     return (
         <div className="checkout-container">
             <h2>Checkout</h2>
-            <label>Name:</label>
-            <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+            <div className="form-group">
+                <label>Name:</label>
+                <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                />
+            </div>
+            <div className="form-group">
+                <label>Email:</label>
+                <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                />
+            </div>
+            <div className="form-group">
+                <label>Phone:</label>
+                <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                />
+            </div>
+            <div className="form-group">
+                <label>Shipping Address:</label>
+                <textarea
+                    name="shippingAddress"
+                    value={formData.shippingAddress}
+                    onChange={handleChange}
+                    required
+                />
+            </div>
+            <div className="form-group">
+                <label>Shipping Option:</label>
+                <select value={shippingOption} onChange={(e) => setShippingOption(e.target.value)}>
+                    <option value="pickup">Pickup from Factory</option>
+                    <option value="courier">Courier (R120)</option>
+                </select>
+            </div>
+            <div className="form-group">
+                <label>Payment Method:</label>
+                <select value={paymentMethod} onChange={(e) => setPaymentMethod(e.target.value)}>
+                    <option value="paystack">Paystack</option>
+                    <option value="eft">EFT</option>
+                </select>
+            </div>
 
-            <label>Email:</label>
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-
-            <label>Phone:</label>
-            <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} required />
-
-            <label>Shipping Address:</label>
-            <textarea value={shippingAddress} onChange={(e) => setShippingAddress(e.target.value)} required />
-
-            <label>Shipping Option:</label>
-            <select value={shippingOption} onChange={(e) => setShippingOption(e.target.value)}>
-                <option value="pickup">Pickup from Factory</option>
-                <option value="courier">Courier (R120)</option>
-            </select>
-
-            <label>Payment Method:</label>
-            <select value={paymentMethod} onChange={(e) => setPaymentMethod(e.target.value)}>
-                <option value="paystack">Paystack</option>
-                <option value="eft">EFT</option>
-            </select>
-
-            <h3>Total: R{grandTotal.toFixed(2)}</h3>
+            <div className="total-summary">
+                <h3>Total: R{grandTotal.toFixed(2)}</h3>
+            </div>
 
             {paymentMethod === "paystack" ? (
-                <button onClick={handlePaystackPayment} disabled={loading}>
+                <button className="payment-button" onClick={handlePaystackPayment} disabled={loading}>
                     {loading ? "Processing..." : "Pay with Paystack"}
                 </button>
             ) : (
-                <button onClick={handleEFTPayment} disabled={loading}>
+                <button className="payment-button" onClick={handleEFTPayment} disabled={loading}>
                     {loading ? "Processing..." : "Place Order (EFT)"}
                 </button>
             )}
 
             {paymentMethod === "eft" && (
-                <div>
+                <div className="eft-instructions">
                     <p>Please make an EFT payment to:</p>
-                    <p>Bank: Your Bank Name</p>
-                    <p>Account Number: 1234567890</p>
-                    <p>Reference: Your Name</p>
+                    <p><strong>Bank:</strong> Your Bank Name</p>
+                    <p><strong>Account Number:</strong> 1234567890</p>
+                    <p><strong>Reference:</strong> Your Name</p>
                 </div>
             )}
 
-            {statusMessage && <p>{statusMessage}</p>}
+            {statusMessage && <p className="status-message">{statusMessage}</p>}
         </div>
     );
 };
