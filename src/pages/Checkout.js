@@ -14,6 +14,17 @@ const Checkout = () => {
     const [statusMessage, setStatusMessage] = useState("");
     const navigate = useNavigate();
 
+    // ✅ Auto-fill fields from local storage (or session data)
+    useEffect(() => {
+        const storedUserData = JSON.parse(localStorage.getItem("userData"));
+        if (storedUserData) {
+            setName(storedUserData.name || "");
+            setEmail(storedUserData.email || "");
+            setPhone(storedUserData.phone || "");
+            setShippingAddress(storedUserData.address || "");
+        }
+    }, []);
+
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     const shippingFee = shippingOption === "courier" ? 120 : 0;
     const grandTotal = total + shippingFee;
@@ -32,7 +43,7 @@ const Checkout = () => {
                 await fetch("https://backend-7dm6.onrender.com/checkout", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ email, cart, total: grandTotal, shippingAddress, shippingOption }),
+                    body: JSON.stringify({ email, cart, total: grandTotal, shippingAddress, shippingOption, paymentMethod }),
                 });
             } else {
                 setStatusMessage("Failed to initialize payment.");

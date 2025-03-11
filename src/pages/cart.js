@@ -17,20 +17,27 @@ const Cart = () => {
                     <ul>
                         {cart.map((item) => (
                             <li key={item.id}>
-                                {item.title} - {item.quantity} x R{item.price.toFixed(2)}
-                                {item.color && <p>Color: {item.color}</p>}
-                                {item.size && <p>Size: {item.size}</p>}
-                                {item.lineArt && <p>Line Art: {item.lineArt}</p>}
-                                {item.stand && <p>Stand: {item.stand}</p>}
-                                <button onClick={() => removeFromCart(item.id)}>Remove</button>
+                                <div className="cart-item">
+                                    <div className="cart-item-details">
+                                        <h3>{item.title}</h3>
+                                        <p>{item.quantity} x R{item.price.toFixed(2)}</p>
+                                        {item.color && <p>Color: {item.color}</p>}
+                                        {item.size && <p>Size: {item.size}</p>}
+                                        {item.lineArt && item.lineArt !== "Plain" && <p>Line Art: {item.lineArt}</p>}
+                                        {item.stand && item.stand !== "No Stand" && <p>Stand: {item.stand}</p>}
+                                    </div>
+                                    <button className="remove-button" onClick={() => removeFromCart(item.id)}>Remove</button>
+                                </div>
                             </li>
                         ))}
                     </ul>
-                    <p>Total: R{totalPrice.toFixed(2)}</p>
-                    <button onClick={clearCart}>Clear Cart</button>
-                    <Link to="/checkout">
-                        <button>Proceed to Checkout</button>
-                    </Link>
+                    <div className="cart-summary">
+                        <p>Total: R{totalPrice.toFixed(2)}</p>
+                        <button className="clear-cart-button" onClick={clearCart}>Clear Cart</button>
+                        <Link to="/checkout">
+                            <button className="checkout-button">Proceed to Checkout</button>
+                        </Link>
+                    </div>
                 </>
             )}
         </div>
