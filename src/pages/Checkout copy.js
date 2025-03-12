@@ -33,12 +33,10 @@ const Checkout = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    // Calculate totals
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     const shippingFee = shippingOption === "courier" ? 120 : 0;
     const grandTotal = total + shippingFee;
 
-    // Handle Paystack payment
     const handlePaystackPayment = async () => {
         setLoading(true);
         try {
@@ -73,7 +71,6 @@ const Checkout = () => {
         }
     };
 
-    // Handle EFT payment
     const handleEFTPayment = async () => {
         setLoading(true);
         try {
