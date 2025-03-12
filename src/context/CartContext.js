@@ -1,10 +1,19 @@
 // src/context/CartContext.js
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-    const [cart, setCart] = useState([]);
+    // Load cart from localStorage or default to an empty array
+    const [cart, setCart] = useState(() => {
+        const savedCart = localStorage.getItem("cart");
+        return savedCart ? JSON.parse(savedCart) : [];
+    });
+
+    // Save cart to localStorage whenever it changes
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }, [cart]);
 
     // Generate a unique key for each cart item based on its attributes
     const generateItemKey = (item) => {
@@ -31,12 +40,12 @@ export const CartProvider = ({ children }) => {
 
     // Remove an item from the cart
     const removeFromCart = (id) => {
-        setCart(cart.filter((item) => item.id !== id));
+        setCart((prevCart) => prevCart.filter((item) => item.id !== id));
     };
 
     // Clear the entire cart
     const clearCart = () => {
-        setCart([]);
+        setCart([]); // This will also clear localStorage thanks to the useEffect
     };
 
     return (

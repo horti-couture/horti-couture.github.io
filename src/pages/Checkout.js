@@ -62,6 +62,7 @@ const Checkout = () => {
                         paymentMethod,
                     }),
                 });
+                clearCart(); // Clear the cart after successful payment
             } else {
                 setStatusMessage("Failed to initialize payment.");
             }
@@ -90,7 +91,7 @@ const Checkout = () => {
                 }),
             });
             setStatusMessage("Order placed successfully! Please make an EFT payment to our bank account.");
-            clearCart();
+            clearCart(); // Clear the cart after successful order placement
             navigate("/");
         } catch (error) {
             setStatusMessage("Error: " + error.message);
