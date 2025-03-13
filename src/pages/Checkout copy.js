@@ -33,10 +33,12 @@ const Checkout = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    // Calculate totals
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     const shippingFee = shippingOption === "courier" ? 120 : 0;
     const grandTotal = total + shippingFee;
 
+    // Handle Paystack payment
     const handlePaystackPayment = async () => {
         setLoading(true);
         try {
@@ -60,6 +62,7 @@ const Checkout = () => {
                         paymentMethod,
                     }),
                 });
+                clearCart(); // Clear the cart after successful payment
             } else {
                 setStatusMessage("Failed to initialize payment.");
             }
@@ -71,6 +74,7 @@ const Checkout = () => {
         }
     };
 
+    // Handle EFT payment
     const handleEFTPayment = async () => {
         setLoading(true);
         try {
@@ -87,7 +91,7 @@ const Checkout = () => {
                 }),
             });
             setStatusMessage("Order placed successfully! Please make an EFT payment to our bank account.");
-            clearCart();
+            clearCart(); // Clear the cart after successful order placement
             navigate("/");
         } catch (error) {
             setStatusMessage("Error: " + error.message);

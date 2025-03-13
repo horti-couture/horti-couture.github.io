@@ -69,3 +69,86 @@
     color: #ff4d4d;
     font-weight: bold;
 }
+/* src/styles/Checkout.css */
+.checkout-container {
+    padding: 20px;
+    max-width: 600px; /* Reduced width */
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center everything horizontally */
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%; /* Full width */
+    max-width: 400px; /* Smaller width for input boxes */
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left; /* Align labels to the left */
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.total-summary {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 100%; /* Full width */
+    max-width: 400px; /* Match input width */
+}
+
+.payment-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px; /* Match input width */
+    margin-top: 10px;
+}
+
+.payment-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.eft-instructions {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e9f5ff;
+    border-radius: 4px;
+    width: 100%; /* Full width */
+    max-width: 400px; /* Match input width */
+    text-align: left; /* Align text to the left */
+}
+
+.status-message {
+    margin-top: 15px;
+    color: #ff4d4d;
+    font-weight: bold;
+}
