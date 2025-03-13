@@ -159,7 +159,7 @@ const Checkout = () => {
                 <div className="form-group">
                     <label>Payment Method:</label>
                     <select value={paymentMethod} onChange={(e) => setPaymentMethod(e.target.value)}>
-                        <option value="paystack">Paystack</option>
+                        <option value="Card">Paystack</option>
                         <option value="eft">EFT</option>
                     </select>
                 </div>
