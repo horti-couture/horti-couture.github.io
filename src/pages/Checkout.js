@@ -170,7 +170,7 @@ const Checkout = () => {
 
                 {paymentMethod === "paystack" ? (
                     <button className="payment-button" onClick={handlePaystackPayment} disabled={loading}>
-                        {loading ? "Processing..." : "Pay with Paystack"}
+                        {loading ? "Processing..." : "Pay with Card"}
                     </button>
                 ) : (
                     <button className="payment-button" onClick={handleEFTPayment} disabled={loading}>
