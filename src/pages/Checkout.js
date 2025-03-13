@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useCart } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
-import "./Checkout.css"; // Ensure the CSS file is imported
+import "../styles/Checkout.css"; // Ensure the CSS file is imported
 
 const Checkout = () => {
     const { cart, clearCart } = useCart();
