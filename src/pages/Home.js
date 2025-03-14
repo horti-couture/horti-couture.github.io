@@ -5,11 +5,15 @@ import "../styles/Home.css";
 import paletteImage from "../assets/palette.png";  // Import the new banner image
 import leftImage from "../assets/left.jpg";  // Keep the left image
 import rightImage from "../assets/right.jpg";  // Keep the right image
+import bannerImage from "../assets/banner.jpg";  // Import the new banner image
 
 const Home = () => {
     return (
         <>
             <main className="home-container">
+                {/* New Banner Image at the top */}
+                <img src={bannerImage} alt="Horti-Couture Banner" className="top-banner" />
+
                 <div className="home-content">
                     {/* Left Image */}
                     <div className="left-image-container">
@@ -27,7 +31,7 @@ const Home = () => {
 
                         {/* Button linking to the contact page */}
                         <Link to="/contact" className="contact-button">
-                            Contact Us For A Quote
+                            Contact Us
                         </Link>
                     </div>
 
