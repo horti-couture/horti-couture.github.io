@@ -4,6 +4,7 @@ import ProductCard from '../../components/ProductCard/ProductCard';
 import PhotoViewer from '../../components/PhotoViewer/PhotoViewer';
 import products from '../../data/products';
 import './MiniPlanters.css';
+import Footer from "../../components/Footer";
 
 const MiniPlanters = () => {
     const miniplantersProducts = products.filter(product => product.category === "Mini Planters");
@@ -17,7 +18,9 @@ const MiniPlanters = () => {
                 ))}
             </div>
             <PhotoViewer category="Miniplanters" />
+            <Footer />
         </div>
+        
     );
 };
 

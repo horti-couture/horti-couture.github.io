@@ -2,6 +2,7 @@
 import React from 'react';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import PhotoViewer from '../../components/PhotoViewer/PhotoViewer';
+import Footer from "../../components/Footer";
 import products from '../../data/products';
 import './CeramicPlanters.css';
 
@@ -17,6 +18,7 @@ const CeramicPlanters = () => {
                 ))}
             </div>
             <PhotoViewer category="Ceramic" />
+            <Footer />
         </div>
     );
 };

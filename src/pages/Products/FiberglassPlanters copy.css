@@ -1,8 +1,0 @@
-/* src/pages/Products/FiberglassPlanters.css */
-.product-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dynamic grid */
-    gap: 16px; /* Space between products */
-    justify-content: center;
-    padding: 16px;
-}

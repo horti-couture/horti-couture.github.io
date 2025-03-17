@@ -3,6 +3,7 @@ import React from 'react';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import PhotoViewer from '../../components/PhotoViewer/PhotoViewer';
 import products from '../../data/products';
+import Footer from "../../components/Footer";
 import './ResinPlanters.css';
 
 const ResinPlanters = () => {
@@ -17,6 +18,7 @@ const ResinPlanters = () => {
                 ))}
             </div>
             <PhotoViewer category="Resin" />
+            <Footer />
         </div>
     );
 };

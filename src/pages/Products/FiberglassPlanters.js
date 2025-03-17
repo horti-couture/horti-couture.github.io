@@ -2,6 +2,7 @@ import React from 'react';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import PhotoViewer from '../../components/PhotoViewer/PhotoViewer';
 import products from '../../data/products';
+import Footer from "../../components/Footer";
 import './FiberglassPlanters.css';
 
 const FiberglassPlanters = () => {
@@ -16,6 +17,7 @@ const FiberglassPlanters = () => {
                 ))}
             </div>
             <PhotoViewer category="Fiberglass" />
+            <Footer />
         </div>
     );
 };

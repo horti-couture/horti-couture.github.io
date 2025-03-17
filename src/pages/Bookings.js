@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Bookings.css";
+import Footer from "../components/Footer";
 
 const Bookings = () => {
     const [formData, setFormData] = useState({
@@ -107,7 +108,9 @@ const Bookings = () => {
                 </button>
                 {statusMessage && <p>{statusMessage}</p>}
             </form>
+            <Footer />
         </div>
+        
     );
 };
 
