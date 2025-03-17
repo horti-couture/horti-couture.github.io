@@ -119,13 +119,32 @@
 }
 
 .secured-image {
-    position: absolute;
-    right: 80px;
-    bottom: 280px;
-    width: 350px; /* Adjust the size as needed */
+    position: relative; /* Changed from absolute to relative */
+    width: 100%; /* Full width for responsiveness */
+    text-align: center; /* Center the image */
+    margin-top: 20px; /* Add some spacing */
 }
 
 .secured-image img {
-    width: 100%;
-    height: auto;
+    max-width: 100%; /* Ensure the image scales down */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .checkout-page {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .checkout-container {
+        padding: 15px; /* Reduce container padding */
+    }
+
+    .secured-image {
+        margin-top: 15px; /* Adjust spacing */
+    }
+
+    .secured-image img {
+        max-width: 80%; /* Smaller image on mobile */
+    }
 }
