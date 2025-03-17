@@ -1,7 +1,9 @@
+/* General Styles */
 .checkout-page {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    flex-direction: column;
     position: relative;
     padding: 20px;
     background-color: #f5f5f5;
@@ -14,6 +16,7 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centers the container */
 }
 
 .checkout-form {
@@ -21,6 +24,7 @@
     flex-direction: column;
 }
 
+/* Form Fields */
 .form-group {
     margin-bottom: 15px;
 }
@@ -46,6 +50,7 @@
     cursor: pointer;
 }
 
+/* Total Summary */
 .total-summary {
     text-align: right;
     margin-top: 20px;
@@ -56,6 +61,7 @@
     border-radius: 5px;
 }
 
+/* Payment Button */
 .payment-button {
     background-color: #476778;
     color: white;
@@ -77,6 +83,7 @@
     cursor: not-allowed;
 }
 
+/* Pickup Instructions */
 .pickup-instructions {
     margin-top: 20px;
     padding: 15px;
@@ -93,6 +100,7 @@
     color: #476778;
 }
 
+/* EFT Instructions */
 .eft-instructions {
     margin-top: 20px;
     padding: 15px;
@@ -109,6 +117,7 @@
     color: #476778;
 }
 
+/* Error / Status Messages */
 .status-message {
     margin-top: 15px;
     color: #ff4d4d;
@@ -118,11 +127,12 @@
     border-radius: 5px;
 }
 
+/* Secured Image - Desktop (Default) */
 .secured-image {
     position: absolute;
     right: 80px;
     bottom: 280px;
-    width: 350px; /* Adjust the size as needed */
+    width: 350px; /* Adjust size as needed */
 }
 
 .secured-image img {
@@ -130,13 +140,23 @@
     height: auto;
 }
 
+/* Mobile Styling */
 @media (max-width: 768px) {
+    .checkout-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .checkout-container {
+        width: 100%;
+    }
+
+    /* Move secured image below the form */
     .secured-image {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 250px; /* Adjust as needed */
+        position: static; /* No absolute positioning */
+        margin-top: 20px; /* Space between form and image */
+        width: 250px; /* Adjust size as needed */
+        text-align: center;
     }
 }
-
