@@ -133,13 +133,14 @@
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
     .secured-image {
-        position: static; /* Move the logo to the normal flow */
+        position: absolute; /* Move the logo to the normal flow */
+        right: 80px;
         width: 100%; /* Full width for mobile */
         text-align: center; /* Center the logo */
         margin-top: 20px; /* Add spacing below the form */
     }
 
     .secured-image img {
-        max-width: 80%; /* Adjust logo size for mobile */
+        max-width: 90%; /* Adjust logo size for mobile */
     }
 }
