@@ -1,6 +1,7 @@
 // src/pages/Products/MiniPlanters.js
 import React from 'react';
 import ProductCard from '../../components/ProductCard/ProductCard';
+import PhotoViewer from '../../components/PhotoViewer/PhotoViewer';
 import products from '../../data/products';
 import './MiniPlanters.css';
 
@@ -15,6 +16,7 @@ const MiniPlanters = () => {
                     <ProductCard key={product.id} product={product} />
                 ))}
             </div>
+            <PhotoViewer category="Miniplanters" />
         </div>
     );
 };

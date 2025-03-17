@@ -16,7 +16,7 @@ const ResinPlanters = () => {
                     <ProductCard key={product.id} product={product} />
                 ))}
             </div>
-            <PhotoViewer /> {/* Add the Photo Viewer here */}
+            <PhotoViewer category="Resin" />
         </div>
     );
 };
