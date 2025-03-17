@@ -5,7 +5,6 @@
     position: relative;
     padding: 20px;
     background-color: #f5f5f5;
-    min-height: 100vh; /* Ensure the page takes up at least the full viewport height */
 }
 
 .checkout-container {
@@ -15,7 +14,6 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 150px; /* Add space at the bottom for the logo on mobile */
 }
 
 .checkout-form {
@@ -124,29 +122,10 @@
     position: absolute;
     right: 80px;
     bottom: 280px;
-    width: 350px; /* Desktop size */
+    width: 350px; /* Adjust the size as needed */
 }
 
 .secured-image img {
     width: 100%;
     height: auto;
-}
-
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-    .checkout-container {
-        margin-bottom: 120px; /* Add space at the bottom for the logo */
-    }
-
-    .secured-image {
-        position: static; /* Move the logo to the normal flow */
-        width: 100%; /* Full width for mobile */
-        text-align: center; /* Center the logo */
-        margin-top: 20px; /* Add spacing above the logo */
-        margin-bottom: 20px; /* Add spacing below the logo */
-    }
-
-    .secured-image img {
-        max-width: 80%; /* Adjust logo size for mobile */
-    }
 }
