@@ -6,50 +6,57 @@
 
 .product-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dynamic grid */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
     gap: 16px; /* Space between products */
     justify-content: center;
     padding: 16px;
 }
 
-/* Styles for the Photo Viewer */
-.photo-viewer {
-    margin-top: 32px;
-    padding: 16px;
-    text-align: center;
+/* Ensure a better grid layout for small and large screens */
+@media (max-width: 600px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
 }
 
-.photo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
+@media (min-width: 601px) and (max-width: 1024px) {
+    .product-list {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on tablets */
+    }
 }
 
-.photo {
-    max-width: 100%;
-    height: auto;
-    max-height: 400px;
+@media (min-width: 1025px) {
+    .product-list {
+        grid-template-columns: repeat(5, 1fr); /* 5 columns on larger screens */
+    }
+}
+
+/* Styles for the Product Card */
+.product-card {
+    background: white;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
 }
 
-.nav-button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 8px 16px;
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
     border-radius: 4px;
-    cursor: pointer;
-    font-size: 18px;
 }
 
-.nav-button:hover {
-    background-color: #555;
-}
-
-.photo-counter {
+.product-card h3 {
+    font-size: 16px;
+    color: #333;
     margin-top: 8px;
+}
+
+.product-card p {
     font-size: 14px;
-    color: #666;
+    color: #777;
 }
