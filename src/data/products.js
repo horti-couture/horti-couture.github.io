@@ -81,12 +81,12 @@ const products = [
         description: "Bring a dash of fun and character to your garden or houseplants with these adorable resin gnome pot buddies!",
         price: 50.00,
         images: {
-           "Gnome": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/7.png?v=1727935851"
+           "Gnome Pot Buddy": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/7.png?v=1727935851"
         },
         options: [
             {
                 name: "Color",
-                values: ["Tall Cactus"]
+                values: ["Gnome Pot Buddy"]
             }
         ],
         category: "Mini Planters"
@@ -449,7 +449,7 @@ const products = [
         id: 18,
         handle: "everest-fiberglass-planter",
         title: "Everest Fiberglass Planter",
-        description: "Elevate your outdoor space with the stylish Everest Fiberglass Planters. Perfect for larger plants",
+        description: "Elevate your outdoor space with the stylish Everest Fiberglass Planters. Perfect for larger plants. For line art options, after placing an order, a sales agent will contact you to discuss color choices. Please specify your preferred top coat color when placing your order",
         price: 3246.50,  
         prices: {
             "Medium H=65cm W=36cm": 3246.50,
@@ -484,7 +484,7 @@ const products = [
         id: 19,
         handle: "victoria-fiberglass-planter",
         title: "Victoria Fiberglass Planter",
-        description: "Enjoy a modern look outdoors with these stylish fiberglass Victoria planters.",
+        description: "Enjoy a modern look outdoors with these stylish fiberglass Victoria planters. For line art options, after placing an order, a sales agent will contact you to discuss color choices. Please specify your preferred top coat color when placing your order",
         price: 3246.50,  
         prices: {
             "Medium H=36cm x W=39.5cm": 1260.00,
@@ -618,7 +618,175 @@ const products = [
             }
         ],
         category: "Ceramic Planters"
-    }
+    },
+
+    {
+        id: 23,
+        handle: "resin-buddha-candle-holder",
+        title: "Resin Buddha Candle Holder",
+        description: "This beautiful Resin Buddha Candle Holder is perfect for adding a spiritual touch to your home. With a 19.5cm height and 13cm width.",
+        price: 400.00,
+        images: {
+           "Buddha Candle Holder": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Picsart_23-07-26_14-42-19-795.png?v=1694974502"
+        },
+        options: [
+            {
+                name: "Color",
+                values: ["Buddha Candle Holder"]
+            }
+        ],
+        category: "Mini Planters"
+    },
+
+    {
+        id: 24,
+        handle: "holding-hands",
+        title: "Holding Hands",
+        description: "Elevate your space with our exquisite Resin Holding Hands Sculpture, an artful representation of connection and support.",
+        price: 195.00,
+        images: {
+            "Midnight Sky": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Midnight_Sky_Hands2.png?v=1718971787",
+            "Aluminum Snow": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Aluminum_Snow_Hands2_0402344b-27d0-4f27-a4e8-3b574d7f697f.png?v=1718971828",
+            "Frosted Cube": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Frosted_Cube_Hands2_5ec0212d-c180-48a0-9c18-efc96a676bf6.png?v=1718971832",
+            "Dry Gold": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Dry_Gold_Hands2_f0093394-1e9a-4bed-a18b-eb5186317f74.png?v=1718971850",
+            "Night Jewl": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Night_Jewel_Hands2_0474457b-5142-4148-bfeb-1285a46df637.png?v=1718971841",
+            "Canyon Wall": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Terra_Cotta_Hands2_93849071-0aa6-4b4e-b2b2-678abb453295.png?v=1718971847",
+            "Mountain Stream": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Mountain_Stream_Hands2_6bfa613f-a981-470e-9196-71164f1982b5.png?v=1718971880",
+            "Nautilus Blue": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Nautilus_Blue_Hands2_ee00c3a0-8f61-4587-818e-b128e05478a3.png?v=1718971868",
+            "Aloe Leaf": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Aloe_Leaf_Hands2_59eda8b0-e911-4532-aec3-bc6be5fd9d60.png?v=1718971862"
+        },
+        options: [
+            {
+                name: "Color",
+                values: ["Midnight Sky", "Aluminum Snow", "Frosted Cube", "Dry Gold", "Night Jewl", "Canyon Wall", "Mountain Stream", "Nautilus Blue", "Aloe Leaf"]
+            }
+        ],
+        category: "Mini Planters"
+    },
+
+    {
+        id: 25,
+        handle: "resin-heart-container",
+        title: "Resin Heart Container",
+        description: "Add a touch of love and elegance to your home with our Heart-Shaped Resin Container.",
+        price: 65.00,
+        images: {
+            "Midnight Sky": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Midnight_Sky_Heart_67806bc6-31a0-45a2-a88f-02e4ffcddb1a.png?v=1718972203",
+            "Aluminum Snow": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Aluminum_Snow_Heart.png?v=1718972209",
+            "Frosted Cube": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Frosted_Cube_heart.png?v=1718972213",
+            "Dry Gold": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Dry_Gold_heart.png?v=1718972225",
+            "Night Jewl": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Night_Jewel_Heart.png?v=1718972216",
+            "Canyon Wall": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/canyon_wall_heart_1614232f-1ac9-4c81-b22d-338ccd9799fc.png?v=1718972418",
+            "Mountain Stream": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Mountain_Stream_Heart.png?v=1718972247",
+            "Nautilus Blue": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Nautilus_Blue_Heart_5846f8be-6685-4306-a8ab-c2e088c4103e.png?v=1718972415",
+            "Aloe Leaf": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Aloe_Leaf_heart.png?v=1718972227"
+        },
+        options: [
+            {
+                name: "Color",
+                values: ["Midnight Sky", "Aluminum Snow", "Frosted Cube", "Dry Gold", "Night Jewl", "Canyon Wall", "Mountain Stream", "Nautilus Blue", "Aloe Leaf"]
+            }
+        ],
+        category: "Mini Planters"
+    },
+
+    {
+        id: 26,
+        handle: "resin-laughing-buddha",
+        title: "Resin Laughing Buddha",
+        description: "This Resin Laughing Buddha statue stands 19.5cm tall and 17.5cm wide, making it perfect for displaying anywhere in your home.",
+        price: 400.00,
+        images: {
+            "Midnight Sky": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Picsart_23-07-26_14-36-27-735.png?v=1694973944",
+            "Aluminum Snow": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Picsart_23-07-26_14-36-27-735.png?v=1694973944",
+            "Frosted Cube": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Picsart_23-07-26_14-36-27-735.png?v=1694973944",
+            "Dry Gold": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Picsart_23-07-26_14-36-27-735.png?v=1694973944",
+            "Night Jewl": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Picsart_23-07-26_14-36-27-735.png?v=1694973944",
+            "Canyon Wall": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Picsart_23-07-26_14-36-27-735.png?v=1694973944",
+            "Mountain Stream": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Picsart_23-07-26_14-36-27-735.png?v=1694973944",
+            "Nautilus Blue": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Picsart_23-07-26_14-36-27-735.png?v=1694973944",
+            "Aloe Leaf": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Picsart_23-07-26_14-36-27-735.png?v=1694973944"
+        },
+        options: [
+            {
+                name: "Color",
+                values: ["Midnight Sky", "Aluminum Snow", "Frosted Cube", "Dry Gold", "Night Jewl", "Canyon Wall", "Mountain Stream", "Nautilus Blue", "Aloe Leaf"]
+            }
+        ],
+        category: "Mini Planters"
+    },
+
+    {
+        id: 27,
+        handle: "resin-buddha-head",
+        title: "Resin Buddha Head",
+        description: "his beautiful resin Buddha Head stands 23.5cm tall and is 12cm wide, with a stunningly detailed finish.",
+        price: 400.00,
+        images: {
+           "Resin Buddha Head": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Picsart_23-07-26_14-38-57-684.png?v=1694974259"
+        },
+        options: [
+            {
+                name: "Color",
+                values: ["Resin Buddha Head"]
+            }
+        ],
+        category: "Mini Planters"
+    },
+
+    {
+        id: 28,
+        handle: "resin-tree-stump-planter",
+        title: "Resin Tree Stump Planter",
+        description: "This 7-cm-high, 10-cm-wide Resin Tree Stump Planter is perfect for brightening up indoor and outdoor areas with small plants, succulents, and shrubs.",
+        price: 70.00,
+        images: {
+           "Resin Tree Stump Planter": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Picsart_23-07-26_15-02-35-640.png?v=1694975195"
+        },
+        options: [
+            {
+                name: "Color",
+                values: ["Resin Tree Stump Planter"]
+            }
+        ],
+        category: "Mini Planters"
+    },
+
+    {
+        id: 29,
+        handle: "resin-excited-groot-mini-planter",
+        title: "Resin Excited Groot Mini Planter",
+        description: "This Resin Excited Groot Mini Planter is a perfect addition to your home or office. It stands 14cm high and measures 15cm wide.",
+        price: 200.00,
+        images: {
+           "Resin Excited Groot Mini Planter": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Picsart_23-07-26_15-03-48-184.png?v=1694974820"
+        },
+        options: [
+            {
+                name: "Color",
+                values: ["Resin Excited Groot Mini Planter"]
+            }
+        ],
+        category: "Mini Planters"
+    },
+
+    {
+        id: 30,
+        handle: "resin-folded-arms-groot-mini-planter",
+        title: "Resin Folded Arms Groot Mini Planter",
+        description: "This Resin Excited Groot Mini Planter is a perfect addition to your home or office. It stands 14cm high and measures 15cm wide.",
+        price: 200.00,
+        images: {
+           "Resin Folded Arms Groot Mini Planter": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Picsart_23-07-26_15-06-17-227.png?v=1694975074"
+        },
+        options: [
+            {
+                name: "Color",
+                values: ["Resin Folded Arms Groot Mini Planter"]
+            }
+        ],
+        category: "Mini Planters"
+    },
 ];
 
 export default products;

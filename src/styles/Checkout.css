@@ -63,7 +63,7 @@
 
 /* Payment Button */
 .payment-button {
-    background-color: #476778;
+    background-color: #3DA19A;
     color: white;
     padding: 12px;
     font-size: 16px;
@@ -75,7 +75,7 @@
 }
 
 .payment-button:hover {
-    background-color: #375160;
+    background-color: #4BB8B1;
 }
 
 .payment-button:disabled {

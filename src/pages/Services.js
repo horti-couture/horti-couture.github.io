@@ -46,8 +46,8 @@ const Services = () => {
                         </ul>
 
                         {/* Contact Button */}
-                        <button className="contact-button" onClick={() => navigate("/contact")}>
-                            Contact Us For A Quote
+                        <button className="contact-button" onClick={() => navigate("/bookings")}>
+                            Book A Service Here
                         </button>
                     </div>
 

@@ -97,7 +97,7 @@
     font-size: 18px;
     font-weight: bold;
     color: white;
-    background-color: #476778;
+    background-color: #3DA19A;
     border: none;
     border-radius: 5px;
     text-decoration: none;
@@ -106,5 +106,5 @@
 }
 
 .contact-button:hover {
-    background-color: #375160;
+    background-color: #4BB8B1;
 }
