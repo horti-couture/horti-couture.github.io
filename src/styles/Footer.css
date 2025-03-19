@@ -186,3 +186,46 @@ html, body {
     left: 0;
     right: 0;
 }
+
+@media (max-width: 768px) {
+    .footer {
+        font-size: 12px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left {
+        position: static; /* Remove absolute positioning */
+        display: flex;
+        justify-content: center; /* Center icons */
+        flex-wrap: wrap; /* Allow wrapping if needed */
+        margin-bottom: 10px; /* Add spacing between icons and text */
+    }
+
+    .footer-left .icon-content {
+        margin: 5px; /* Adjust spacing between icons */
+    }
+
+    .footer-content {
+        width: 100%;
+    }
+
+    .footer-content p {
+        margin: 5px 0;
+        text-align: center;
+        white-space: nowrap; /* Prevents text from breaking into a new line */
+    }
+
+    .footer-content p:nth-child(2) {
+        display: inline-block; /* Ensures it's on the same line */
+    }
+
+    .footer-content p:nth-child(2) a {
+        white-space: nowrap; /* Ensures email stays on the same line */
+    }
+}
+
+
