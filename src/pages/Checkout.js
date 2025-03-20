@@ -56,13 +56,14 @@ const Checkout = () => {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
+                        name: formData.name, // Ensure name is sent
                         email: formData.email,
                         cart: cart,
                         total: grandTotal,
                         address: formData.address,
                         shippingOption,
                         paymentMethod,
-                    }),
+                    }),                    
                 });
                 clearCart();
             } else {

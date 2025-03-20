@@ -15,7 +15,6 @@ const ProductDetails = () => {
     const [basePrice, setBasePrice] = useState(0);  // Initialize as number
     const [quantity, setQuantity] = useState(1);
     const [totalPrice, setTotalPrice] = useState(0);
-    const [message, setMessage] = useState(""); // State for the message
 
     const { addToCart } = useCart(); // Access the addToCart function from the context
 
@@ -105,15 +104,7 @@ const ProductDetails = () => {
         };
 
         addToCart(cartItem, quantity); // Add to cart
-        
-        // Show the message
-        const itemMessage = `${quantity} ${product.title}(s) added to cart!`;
-        setMessage(itemMessage);
-
-        // Hide the message after 3 seconds
-        setTimeout(() => {
-            setMessage(""); // Clear the message after 3 seconds
-        }, 3000);
+        alert(`${quantity} ${product.title}(s) added to cart!`);
     };
 
     // Check if product has Size, Line Art, and Wooden Stand options
@@ -192,9 +183,6 @@ const ProductDetails = () => {
 
                 <button onClick={handleAddToCart}>Add to Cart</button>
             </div>
-
-            {/* Message Display */}
-            {message && <div className="cart-message">{message}</div>}
         </div>
     );
 };

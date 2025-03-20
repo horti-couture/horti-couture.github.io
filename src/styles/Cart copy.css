@@ -15,9 +15,9 @@
 }
 
 .cart-container ul {
-    display: flex;
-    flex-direction: column; /* Ensures items are stacked vertically */
-    gap: 10px; /* Adds spacing between items */
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
 }
 
 .cart-container li {
@@ -28,12 +28,8 @@
 
 .cart-item {
     display: flex;
-    flex-direction: column; /* Stack details and button */
-    align-items: flex-start; /* Align text to the left */
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 6px;
-    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .cart-item-details {

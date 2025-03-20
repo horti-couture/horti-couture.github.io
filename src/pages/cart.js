@@ -26,7 +26,9 @@ const Cart = () => {
                                         {item.lineArt && item.lineArt !== "Plain" && <p>Line Art: {item.lineArt}</p>}
                                         {item.stand && item.stand !== "No Stand" && <p>Stand: {item.stand}</p>}
                                     </div>
-                                    <button className="remove-button" onClick={() => removeFromCart(item.id)}>Remove</button>
+                                    <button className="remove-button" onClick={() => removeFromCart(item)}>
+    Remove
+</button>
                                 </div>
                             </li>
                         ))}

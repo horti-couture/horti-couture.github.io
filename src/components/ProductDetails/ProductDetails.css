@@ -158,3 +158,16 @@ button.add-to-cart:focus {
         width: 100%;
     }
 }
+
+.cart-message {
+    background-color: #3DA19A; /* Green background */
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+}

@@ -39,11 +39,8 @@ export const CartProvider = ({ children }) => {
     };
 
     // Remove an item from the cart
-    const removeFromCart = (item) => {
-        setCart((prevCart) => {
-            const updatedCart = prevCart.filter((p) => generateItemKey(p) !== generateItemKey(item));
-            return [...updatedCart]; // Ensuring a new array is returned to trigger re-render
-        });
+    const removeFromCart = (id) => {
+        setCart((prevCart) => prevCart.filter((item) => item.id !== id));
     };
 
     // Clear the entire cart
