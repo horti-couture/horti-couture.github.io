@@ -1,9 +1,8 @@
-// src/pages/Checkout.js
 import React, { useState, useEffect } from "react";
 import { useCart } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
 import "../styles/Checkout.css";
-import acceptedImage from "../assets/accepted.png";
+import acceptedImage from "../assets/accepted.png"; // Import the image
 
 const Checkout = () => {
     const { cart, clearCart } = useCart();
@@ -18,8 +17,6 @@ const Checkout = () => {
     const [loading, setLoading] = useState(false);
     const [statusMessage, setStatusMessage] = useState("");
     const navigate = useNavigate();
-
-    const MINIMUM_ORDER_AMOUNT = 150; // Minimum order value in Rands
 
     // Auto-fill fields from local storage
     useEffect(() => {
@@ -43,16 +40,8 @@ const Checkout = () => {
     const shippingFee = shippingOption === "courier" ? 120 : 0;
     const grandTotal = total + shippingFee;
 
-    // Check if order meets minimum requirement
-    const meetsMinimumOrder = total >= MINIMUM_ORDER_AMOUNT;
-
     // Handle Paystack payment
     const handlePaystackPayment = async () => {
-        if (!meetsMinimumOrder) {
-            setStatusMessage(`Please add more items to your cart. Minimum order value is R${MINIMUM_ORDER_AMOUNT} (excluding shipping). Current total is R${total.toFixed(2)}.`);
-            return;
-        }
-
         setLoading(true);
         try {
             const paymentResponse = await fetch("https://backend-7dm6.onrender.com/initialize-payment", {
@@ -67,7 +56,7 @@ const Checkout = () => {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
-                        name: formData.name,
+                        name: formData.name, // Ensure name is sent
                         email: formData.email,
                         cart: cart,
                         total: grandTotal,
@@ -90,11 +79,6 @@ const Checkout = () => {
 
     // Handle EFT payment
     const handleEFTPayment = async () => {
-        if (!meetsMinimumOrder) {
-            setStatusMessage(`Please add more items to your cart. Minimum order value is R${MINIMUM_ORDER_AMOUNT} (excluding shipping). Current total is R${total.toFixed(2)}.`);
-            return;
-        }
-
         setLoading(true);
         try {
             await fetch("https://backend-7dm6.onrender.com/checkout", {
@@ -197,28 +181,15 @@ const Checkout = () => {
 
                     <div className="total-summary">
                         <h3>Total: R{grandTotal.toFixed(2)}</h3>
-                        {!meetsMinimumOrder && (
-                            <p className="minimum-warning">
-                                Minimum order value is R{MINIMUM_ORDER_AMOUNT} (excluding shipping).
-                            </p>
-                        )}
                     </div>
 
                     {paymentMethod === "paystack" ? (
-                        <button 
-                            className="payment-button" 
-                            onClick={handlePaystackPayment} 
-                            disabled={loading || !meetsMinimumOrder}
-                        >
+                        <button className="payment-button" onClick={handlePaystackPayment} disabled={loading}>
                             {loading ? "Please Wait! Processing..." : "Pay with Card"}
                         </button>
                     ) : (
-                        <button 
-                            className="payment-button" 
-                            onClick={handleEFTPayment} 
-                            disabled={loading || !meetsMinimumOrder}
-                        >
-                            {loading ? "Please Wait! Processing..." : "Place Order (EFT)"}
+                        <button className="payment-button" onClick={handleEFTPayment} disabled={loading}>
+                            {loading ? "Please Wait! Processing..." : "PlaceOrder (EFT)"}
                         </button>
                     )}
 
