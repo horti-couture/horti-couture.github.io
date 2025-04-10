@@ -10,17 +10,9 @@ const Header = () => {
 
     return (
         <header className="header">
-            {/* Minimum Order Notice in Top-Left */}
-            <div className="minimum-order-notice">
-                <p>Minimum order of R150 (excl. shipping)</p>
-            </div>
-
-            {/* Logo centered */}
-            <Link to="/" className="logo-container">
+            <Link to="/">
                 <img src={logo} alt="LuxCare Logo" className="logo" />
             </Link>
-
-            {/* Navigation */}
             <nav>
                 <ul className="navbar">
                     <li><Link to="/">Home</Link></li>

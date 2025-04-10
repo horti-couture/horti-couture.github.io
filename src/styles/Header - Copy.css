@@ -1,5 +1,3 @@
-/* src/styles/Header.css */
-
 /* Header Container */
 .header {
     display: flex;
@@ -8,22 +6,6 @@
     padding: 10px 20px;
     background-color: white;
     border-bottom: 2px solid #ddd;
-    position: relative; /* Added to allow absolute positioning of the notice */
-}
-
-/* Minimum Order Notice */
-.minimum-order-notice {
-    position: absolute;
-    top: 5px; /* Small offset from the top */
-    right: 10px; /* Small offset from the right (changed from left) */
-    font-size: 12px; /* Smaller font for subtlety */
-    color: #333; /* Matches navbar color for consistency */
-    font-weight: 400; /* Normal weight to blend in */
-    margin: 0;
-}
-
-.minimum-order-notice p {
-    margin: 0; /* Remove default paragraph margin */
 }
 
 /* Logo */
@@ -46,7 +28,7 @@
 
 .navbar a {
     text-decoration: none;
-    font-size: 14px; /* Adjusted font size from your original */
+    font-size: 14px; /* Adjusted font size */
     font-weight: bold;
     color: #333;
     padding: 10px 15px;
@@ -56,19 +38,12 @@
     color: #007BFF;
 }
 
-/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
         align-items: center;
         text-align: center;
         padding: 10px;
-    }
-
-    .minimum-order-notice {
-        position: static; /* Remove absolute positioning on mobile */
-        margin-bottom: 10px; /* Add spacing below the notice */
-        font-size: 11px; /* Slightly smaller for mobile */
     }
 
     .logo {
