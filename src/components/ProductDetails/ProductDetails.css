@@ -171,3 +171,7 @@ button.add-to-cart:focus {
     font-size: 16px;
     z-index: 1000;
 }
+
+.product-details .product-info p {
+    white-space: pre-wrap;
+}

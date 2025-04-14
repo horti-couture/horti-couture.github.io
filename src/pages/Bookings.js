@@ -72,9 +72,10 @@ const Bookings = () => {
             <form onSubmit={handleSubmit}>
                 <label>Choose a Service:</label>
                 <select name="service" value={formData.service} onChange={handleChange}>
-                    <option value="Plant Advice">Plant Advice - R250</option>
-                    <option value="Land Scaping">Land Scaping - R450</option>
-                    <option value="Area Consultation">Area Consultation - R650</option>
+                    <option value="Plant Advice">Plant Advice</option>
+                    <option value="Land Scaping">Land Scaping</option>
+                    <option value="Area Consultation">Area Consultation</option>
+                    <option value="Other (Specify in Special Notes)">Other (Specify in Special Notes)</option>
                 </select>
 
                 <label>Select a Date:</label>
