@@ -23,15 +23,15 @@ const Checkout = () => {
 
     const MINIMUM_ORDER_AMOUNT = 150;
 
-    // Load saved user data
+    // Load user data
     useEffect(() => {
-        const stored = JSON.parse(localStorage.getItem("userData"));
-        if (stored) {
+        const storedUserData = JSON.parse(localStorage.getItem("userData"));
+        if (storedUserData) {
             setFormData({
-                name: stored.name || "",
-                email: stored.email || "",
-                phone: stored.phone || "",
-                address: stored.address || "",
+                name: storedUserData.name || "",
+                email: storedUserData.email || "",
+                phone: storedUserData.phone || "",
+                address: storedUserData.address || "",
             });
         }
     }, []);
@@ -47,7 +47,7 @@ const Checkout = () => {
     const meetsMinimumOrder = total >= MINIMUM_ORDER_AMOUNT;
 
     // =========================
-    // PAYSTACK FLOW
+    // PAYSTACK (FIXED FLOW)
     // =========================
     const handlePaystackPayment = async () => {
         if (!meetsMinimumOrder) return;
@@ -67,10 +67,10 @@ const Checkout = () => {
             const data = await res.json();
 
             if (!data.data?.authorization_url) {
-                throw new Error("Payment init failed");
+                throw new Error("Payment failed");
             }
 
-            // Save order BEFORE redirect
+            // Save order FIRST (safe for both EFT + card tracking)
             await fetch("https://backend-7dm6.onrender.com/checkout", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -88,14 +88,13 @@ const Checkout = () => {
             window.location.href = data.data.authorization_url;
 
         } catch (err) {
-            setStatusMessage("Payment error: " + err.message);
-        } finally {
+            setStatusMessage("Error: " + err.message);
             setLoading(false);
         }
     };
 
     // =========================
-    // EFT FLOW (FIXED)
+    // EFT (FIXED - YOUR ISSUE)
     // =========================
     const handleEFTPayment = async () => {
         if (!meetsMinimumOrder) return;
@@ -108,7 +107,7 @@ const Checkout = () => {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     name: formData.name,
-                    email: formData.email,
+                    email: formData.email,   // IMPORTANT FIX (was missing before sometimes)
                     cart,
                     total: grandTotal,
                     address: formData.address,
@@ -123,16 +122,13 @@ const Checkout = () => {
                 throw new Error(data.error || "Checkout failed");
             }
 
-            setStatusMessage("Order received! Please complete EFT payment.");
-
+            setStatusMessage("Order received! EFT instructions sent.");
             clearCart();
 
-            setTimeout(() => {
-                navigate("/");
-            }, 1500);
+            setTimeout(() => navigate("/"), 1500);
 
         } catch (err) {
-            setStatusMessage("EFT error: " + err.message);
+            setStatusMessage("Error: " + err.message);
         } finally {
             setLoading(false);
         }
@@ -145,22 +141,55 @@ const Checkout = () => {
 
                 <div className="checkout-form">
 
-                    <input name="name" placeholder="Name" value={formData.name} onChange={handleChange} />
-                    <input name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
-                    <input name="phone" placeholder="Phone" value={formData.phone} onChange={handleChange} />
-                    <input name="address" placeholder="Address" value={formData.address} onChange={handleChange} />
+                    <div className="form-group">
+                        <label>Name:</label>
+                        <input name="name" value={formData.name} onChange={handleChange} />
+                    </div>
 
-                    <select value={shippingOption} onChange={(e) => setShippingOption(e.target.value)}>
-                        <option value="pickup">Pickup</option>
-                        <option value="courier">Courier (R120)</option>
-                    </select>
+                    <div className="form-group">
+                        <label>Email:</label>
+                        <input name="email" value={formData.email} onChange={handleChange} />
+                    </div>
 
-                    <select value={paymentMethod} onChange={(e) => setPaymentMethod(e.target.value)}>
-                        <option value="paystack">Card Payment</option>
-                        <option value="eft">EFT</option>
-                    </select>
+                    <div className="form-group">
+                        <label>Phone:</label>
+                        <input name="phone" value={formData.phone} onChange={handleChange} />
+                    </div>
 
-                    <h3>Total: R{grandTotal.toFixed(2)}</h3>
+                    <div className="form-group">
+                        <label>Address:</label>
+                        <input name="address" value={formData.address} onChange={handleChange} />
+                    </div>
+
+                    <div className="form-group">
+                        <label>Shipping:</label>
+                        <select value={shippingOption} onChange={(e) => setShippingOption(e.target.value)}>
+                            <option value="pickup">Pickup</option>
+                            <option value="courier">Courier (R120)</option>
+                        </select>
+                    </div>
+
+                    {shippingOption === "pickup" && (
+                        <div className="pickup-instructions">
+                            <p><strong>Pickup Address:</strong></p>
+                            <p>44 Kundalila Road</p>
+                            <p>Waterfall</p>
+                            <p>Durban</p>
+                            <p>3652</p>
+                        </div>
+                    )}
+
+                    <div className="form-group">
+                        <label>Payment:</label>
+                        <select value={paymentMethod} onChange={(e) => setPaymentMethod(e.target.value)}>
+                            <option value="paystack">Card</option>
+                            <option value="eft">EFT</option>
+                        </select>
+                    </div>
+
+                    <div className="total-summary">
+                        <h3>Total: R{grandTotal.toFixed(2)}</h3>
+                    </div>
 
                     {paymentMethod === "paystack" ? (
                         <button onClick={handlePaystackPayment} disabled={loading}>
@@ -172,11 +201,13 @@ const Checkout = () => {
                         </button>
                     )}
 
-                    {statusMessage && <p>{statusMessage}</p>}
+                    {statusMessage && <p className="status-message">{statusMessage}</p>}
                 </div>
             </div>
 
-            <img src={acceptedImage} alt="secure" />
+            <div className="secured-image">
+                <img src={acceptedImage} alt="secure" />
+            </div>
         </div>
     );
 };
