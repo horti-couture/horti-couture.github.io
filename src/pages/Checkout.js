@@ -7,29 +7,31 @@ import acceptedImage from "../assets/accepted.png";
 
 const Checkout = () => {
     const { cart, clearCart } = useCart();
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         phone: "",
         address: "",
     });
+
     const [shippingOption, setShippingOption] = useState("pickup");
     const [paymentMethod, setPaymentMethod] = useState("paystack");
     const [loading, setLoading] = useState(false);
     const [statusMessage, setStatusMessage] = useState("");
-    const navigate = useNavigate();
 
-    const MINIMUM_ORDER_AMOUNT = 150; // Minimum order value in Rands
+    const MINIMUM_ORDER_AMOUNT = 150;
 
-    // Auto-fill fields from local storage
+    // Load saved user data
     useEffect(() => {
-        const storedUserData = JSON.parse(localStorage.getItem("userData"));
-        if (storedUserData) {
+        const stored = JSON.parse(localStorage.getItem("userData"));
+        if (stored) {
             setFormData({
-                name: storedUserData.name || "",
-                email: storedUserData.email || "",
-                phone: storedUserData.phone || "",
-                address: storedUserData.address || "",
+                name: stored.name || "",
+                email: stored.email || "",
+                phone: stored.phone || "",
+                address: stored.address || "",
             });
         }
     }, []);
@@ -38,82 +40,99 @@ const Checkout = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    // Calculate totals
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     const shippingFee = shippingOption === "courier" ? 120 : 0;
     const grandTotal = total + shippingFee;
 
-    // Check if order meets minimum requirement
     const meetsMinimumOrder = total >= MINIMUM_ORDER_AMOUNT;
 
-    // Handle Paystack payment
+    // =========================
+    // PAYSTACK FLOW
+    // =========================
     const handlePaystackPayment = async () => {
-        if (!meetsMinimumOrder) {
-            setStatusMessage(`Please add more items to your cart. Minimum order value is R${MINIMUM_ORDER_AMOUNT} (excluding shipping). Current total is R${total.toFixed(2)}.`);
-            return;
-        }
+        if (!meetsMinimumOrder) return;
 
         setLoading(true);
-        try {
-            const paymentResponse = await fetch("https://backend-7dm6.onrender.com/initialize-payment", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email: formData.email, amount: grandTotal }),
-            });
-            const paymentData = await paymentResponse.json();
-            if (paymentData.data && paymentData.data.authorization_url) {
-                window.location.href = paymentData.data.authorization_url;
-                await fetch("https://backend-7dm6.onrender.com/checkout", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
-                        name: formData.name,
-                        email: formData.email,
-                        cart: cart,
-                        total: grandTotal,
-                        address: formData.address,
-                        shippingOption,
-                        paymentMethod,
-                    }),                    
-                });
-                clearCart();
-            } else {
-                setStatusMessage("Failed to initialize payment.");
-            }
-        } catch (error) {
-            setStatusMessage("Error: " + error.message);
-        } finally {
-            setLoading(false);
-            navigate("/");
-        }
-    };
 
-    // Handle EFT payment
-    const handleEFTPayment = async () => {
-        if (!meetsMinimumOrder) {
-            setStatusMessage(`Please add more items to your cart. Minimum order value is R${MINIMUM_ORDER_AMOUNT} (excluding shipping). Current total is R${total.toFixed(2)}.`);
-            return;
-        }
-
-        setLoading(true);
         try {
-            await fetch("https://backend-7dm6.onrender.com/checkout", {
+            const res = await fetch("https://backend-7dm6.onrender.com/initialize-payment", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     email: formData.email,
-                    cart: cart,
+                    amount: grandTotal,
+                }),
+            });
+
+            const data = await res.json();
+
+            if (!data.data?.authorization_url) {
+                throw new Error("Payment init failed");
+            }
+
+            // Save order BEFORE redirect
+            await fetch("https://backend-7dm6.onrender.com/checkout", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    cart,
+                    total: grandTotal,
+                    address: formData.address,
+                    shippingOption,
+                    paymentMethod: "paystack",
+                }),
+            });
+
+            window.location.href = data.data.authorization_url;
+
+        } catch (err) {
+            setStatusMessage("Payment error: " + err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // =========================
+    // EFT FLOW (FIXED)
+    // =========================
+    const handleEFTPayment = async () => {
+        if (!meetsMinimumOrder) return;
+
+        setLoading(true);
+
+        try {
+            const res = await fetch("https://backend-7dm6.onrender.com/checkout", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    cart,
                     total: grandTotal,
                     address: formData.address,
                     shippingOption,
                     paymentMethod: "EFT",
                 }),
             });
-            setStatusMessage("Order placed successfully! Please make an EFT payment to our bank account.");
+
+            const data = await res.json();
+
+            if (!res.ok) {
+                throw new Error(data.error || "Checkout failed");
+            }
+
+            setStatusMessage("Order received! Please complete EFT payment.");
+
             clearCart();
-            navigate("/");
-        } catch (error) {
-            setStatusMessage("Error: " + error.message);
+
+            setTimeout(() => {
+                navigate("/");
+            }, 1500);
+
+        } catch (err) {
+            setStatusMessage("EFT error: " + err.message);
         } finally {
             setLoading(false);
         }
@@ -123,123 +142,41 @@ const Checkout = () => {
         <div className="checkout-page">
             <div className="checkout-container">
                 <h2>Checkout</h2>
-                <div className="checkout-form">
-                    <div className="form-group">
-                        <label>Name:</label>
-                        <input
-                            type="text"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            autoComplete="name"
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label>Email:</label>
-                        <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            autoComplete="email"
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label>Phone:</label>
-                        <input
-                            type="tel"
-                            name="phone"
-                            value={formData.phone}
-                            onChange={handleChange}
-                            autoComplete="tel"
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label>Address:</label>
-                        <input
-                            type="text"
-                            name="address"
-                            value={formData.address}
-                            onChange={handleChange}
-                            autoComplete="address-line1"
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label>Shipping Option:</label>
-                        <select value={shippingOption} onChange={(e) => setShippingOption(e.target.value)}>
-                            <option value="pickup">Pickup from Factory</option>
-                            <option value="courier">Courier (R120)</option>
-                        </select>
-                    </div>
-                    {shippingOption === "pickup" && (
-                        <div className="pickup-instructions">
-                            <p><strong>Pickup Address:</strong></p>
-                            <p>44 Kundalila Road</p>
-                            <p>Waterfall</p>
-                            <p>Durban</p>
-                            <p>KwaZulu-Natal</p>
-                            <p>3652</p>
-                            <p>South Africa</p>
-                            <p><strong>Please Note:</strong> Ensure to bring your order confirmation email when picking up your items.</p>
-                        </div>
-                    )}
-                    <div className="form-group">
-                        <label>Payment Method:</label>
-                        <select value={paymentMethod} onChange={(e) => setPaymentMethod(e.target.value)}>
-                            <option value="paystack">Pay With Card</option>
-                            <option value="eft">EFT</option>
-                        </select>
-                    </div>
 
-                    <div className="total-summary">
-                        <h3>Total: R{grandTotal.toFixed(2)}</h3>
-                        {!meetsMinimumOrder && (
-                            <p className="minimum-warning">
-                                Minimum order value is R{MINIMUM_ORDER_AMOUNT} (excluding shipping).
-                            </p>
-                        )}
-                    </div>
+                <div className="checkout-form">
+
+                    <input name="name" placeholder="Name" value={formData.name} onChange={handleChange} />
+                    <input name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
+                    <input name="phone" placeholder="Phone" value={formData.phone} onChange={handleChange} />
+                    <input name="address" placeholder="Address" value={formData.address} onChange={handleChange} />
+
+                    <select value={shippingOption} onChange={(e) => setShippingOption(e.target.value)}>
+                        <option value="pickup">Pickup</option>
+                        <option value="courier">Courier (R120)</option>
+                    </select>
+
+                    <select value={paymentMethod} onChange={(e) => setPaymentMethod(e.target.value)}>
+                        <option value="paystack">Card Payment</option>
+                        <option value="eft">EFT</option>
+                    </select>
+
+                    <h3>Total: R{grandTotal.toFixed(2)}</h3>
 
                     {paymentMethod === "paystack" ? (
-                        <button 
-                            className="payment-button" 
-                            onClick={handlePaystackPayment} 
-                            disabled={loading || !meetsMinimumOrder}
-                        >
-                            {loading ? "Please Wait! Processing..." : "Pay with Card"}
+                        <button onClick={handlePaystackPayment} disabled={loading}>
+                            Pay with Card
                         </button>
                     ) : (
-                        <button 
-                            className="payment-button" 
-                            onClick={handleEFTPayment} 
-                            disabled={loading || !meetsMinimumOrder}
-                        >
-                            {loading ? "Please Wait! Processing..." : "Place Order (EFT)"}
+                        <button onClick={handleEFTPayment} disabled={loading}>
+                            Place EFT Order
                         </button>
                     )}
 
-                    {paymentMethod === "eft" && (
-                        <div className="eft-instructions">
-                            <p>Please make an EFT payment to:</p>
-                            <p><strong>Bank:</strong> First National Bank</p>
-                            <p><strong>Account Name:</strong> Pure Leaf</p>
-                            <p><strong>Account Number:</strong> 62710410557</p>
-                            <p><strong>Branch Code:</strong> 221526</p>
-                            <p><strong>Reference:</strong> Transaction ID: TXN-</p>
-                            <p><strong>Please Note:</strong> Once the payment is made, please send a confirmation email with your payment receipt to horticouture@eastcoastsa.net Your order will not be shipped until the funds have cleared in our account the Transaction ID is found in your invoice email.</p>
-                        </div>
-                    )}
-
-                    {statusMessage && <p className="status-message">{statusMessage}</p>}
+                    {statusMessage && <p>{statusMessage}</p>}
                 </div>
             </div>
-            <div className="secured-image">
-                <img src={acceptedImage} alt="Secured by Paystack" />
-            </div>
+
+            <img src={acceptedImage} alt="secure" />
         </div>
     );
 };
