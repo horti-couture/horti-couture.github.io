@@ -7,8 +7,6 @@ import acceptedImage from "../assets/accepted.png";
 
 const Checkout = () => {
     const { cart, clearCart } = useCart();
-    const navigate = useNavigate();
-
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -20,10 +18,11 @@ const Checkout = () => {
     const [paymentMethod, setPaymentMethod] = useState("paystack");
     const [loading, setLoading] = useState(false);
     const [statusMessage, setStatusMessage] = useState("");
+    const navigate = useNavigate();
 
     const MINIMUM_ORDER_AMOUNT = 150;
 
-    // Load user data
+    // Auto-fill user data
     useEffect(() => {
         const storedUserData = JSON.parse(localStorage.getItem("userData"));
         if (storedUserData) {
@@ -40,6 +39,7 @@ const Checkout = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    // Totals
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     const shippingFee = shippingOption === "courier" ? 120 : 0;
     const grandTotal = total + shippingFee;
@@ -47,7 +47,7 @@ const Checkout = () => {
     const meetsMinimumOrder = total >= MINIMUM_ORDER_AMOUNT;
 
     // =========================
-    // PAYSTACK (FIXED FLOW)
+    // PAYSTACK (UNCHANGED FLOW)
     // =========================
     const handlePaystackPayment = async () => {
         if (!meetsMinimumOrder) return;
@@ -55,22 +55,25 @@ const Checkout = () => {
         setLoading(true);
 
         try {
-            const res = await fetch("https://backend-7dm6.onrender.com/initialize-payment", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    email: formData.email,
-                    amount: grandTotal,
-                }),
-            });
+            const paymentResponse = await fetch(
+                "https://backend-7dm6.onrender.com/initialize-payment",
+                {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        email: formData.email,
+                        amount: grandTotal,
+                    }),
+                }
+            );
 
-            const data = await res.json();
+            const paymentData = await paymentResponse.json();
 
-            if (!data.data?.authorization_url) {
+            if (!paymentData.data?.authorization_url) {
                 throw new Error("Payment failed");
             }
 
-            // Save order FIRST (safe for both EFT + card tracking)
+            // Save order BEFORE redirect
             await fetch("https://backend-7dm6.onrender.com/checkout", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -85,16 +88,17 @@ const Checkout = () => {
                 }),
             });
 
-            window.location.href = data.data.authorization_url;
+            window.location.href = paymentData.data.authorization_url;
 
-        } catch (err) {
-            setStatusMessage("Error: " + err.message);
+        } catch (error) {
+            setStatusMessage("Error: " + error.message);
+        } finally {
             setLoading(false);
         }
     };
 
     // =========================
-    // EFT (FIXED - YOUR ISSUE)
+    // EFT (FIXED - RESTORED UI BEHAVIOUR)
     // =========================
     const handleEFTPayment = async () => {
         if (!meetsMinimumOrder) return;
@@ -102,19 +106,22 @@ const Checkout = () => {
         setLoading(true);
 
         try {
-            const res = await fetch("https://backend-7dm6.onrender.com/checkout", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    name: formData.name,
-                    email: formData.email,   // IMPORTANT FIX (was missing before sometimes)
-                    cart,
-                    total: grandTotal,
-                    address: formData.address,
-                    shippingOption,
-                    paymentMethod: "EFT",
-                }),
-            });
+            const res = await fetch(
+                "https://backend-7dm6.onrender.com/checkout",
+                {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        name: formData.name,
+                        email: formData.email,
+                        cart,
+                        total: grandTotal,
+                        address: formData.address,
+                        shippingOption,
+                        paymentMethod: "EFT",
+                    }),
+                }
+            );
 
             const data = await res.json();
 
@@ -122,13 +129,15 @@ const Checkout = () => {
                 throw new Error(data.error || "Checkout failed");
             }
 
-            setStatusMessage("Order received! EFT instructions sent.");
             clearCart();
 
-            setTimeout(() => navigate("/"), 1500);
+            // IMPORTANT: DO NOT redirect
+            // This allows EFT instructions block to remain visible
 
-        } catch (err) {
-            setStatusMessage("Error: " + err.message);
+            setStatusMessage(""); // keeps UI clean like before
+
+        } catch (error) {
+            setStatusMessage("Error: " + error.message);
         } finally {
             setLoading(false);
         }
@@ -162,9 +171,9 @@ const Checkout = () => {
                     </div>
 
                     <div className="form-group">
-                        <label>Shipping:</label>
+                        <label>Shipping Option:</label>
                         <select value={shippingOption} onChange={(e) => setShippingOption(e.target.value)}>
-                            <option value="pickup">Pickup</option>
+                            <option value="pickup">Pickup from Factory</option>
                             <option value="courier">Courier (R120)</option>
                         </select>
                     </div>
@@ -175,14 +184,16 @@ const Checkout = () => {
                             <p>44 Kundalila Road</p>
                             <p>Waterfall</p>
                             <p>Durban</p>
+                            <p>KwaZulu-Natal</p>
                             <p>3652</p>
+                            <p>South Africa</p>
                         </div>
                     )}
 
                     <div className="form-group">
-                        <label>Payment:</label>
+                        <label>Payment Method:</label>
                         <select value={paymentMethod} onChange={(e) => setPaymentMethod(e.target.value)}>
-                            <option value="paystack">Card</option>
+                            <option value="paystack">Pay With Card</option>
                             <option value="eft">EFT</option>
                         </select>
                     </div>
@@ -192,21 +203,46 @@ const Checkout = () => {
                     </div>
 
                     {paymentMethod === "paystack" ? (
-                        <button onClick={handlePaystackPayment} disabled={loading}>
-                            Pay with Card
+                        <button
+                            className="payment-button"
+                            onClick={handlePaystackPayment}
+                            disabled={loading}
+                        >
+                            {loading ? "Please Wait..." : "Pay with Card"}
                         </button>
                     ) : (
-                        <button onClick={handleEFTPayment} disabled={loading}>
-                            Place EFT Order
+                        <button
+                            className="payment-button"
+                            onClick={handleEFTPayment}
+                            disabled={loading}
+                        >
+                            {loading ? "Please Wait..." : "Place Order (EFT)"}
                         </button>
                     )}
 
+                    {/* ✅ THIS IS YOUR ORIGINAL EFT UI - RESTORED */}
+                    {paymentMethod === "eft" && (
+                        <div className="eft-instructions">
+                            <p>Please make an EFT payment to:</p>
+                            <p><strong>Bank:</strong> First National Bank</p>
+                            <p><strong>Account Name:</strong> Pure Leaf</p>
+                            <p><strong>Account Number:</strong> 62710410557</p>
+                            <p><strong>Branch Code:</strong> 221526</p>
+                            <p><strong>Reference:</strong> TXN- (check your invoice email)</p>
+                            <p>
+                                <strong>Please Note:</strong> Once payment is made, email proof of payment to
+                                horticouture@eastcoastsa.net. Your order will only be processed once funds clear.
+                            </p>
+                        </div>
+                    )}
+
                     {statusMessage && <p className="status-message">{statusMessage}</p>}
+
                 </div>
             </div>
 
             <div className="secured-image">
-                <img src={acceptedImage} alt="secure" />
+                <img src={acceptedImage} alt="Secured by Paystack" />
             </div>
         </div>
     );
