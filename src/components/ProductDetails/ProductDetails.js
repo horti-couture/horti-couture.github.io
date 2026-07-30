@@ -10,18 +10,18 @@ const ProductDetails = () => {
 
     const [selectedColor, setSelectedColor] = useState('');
     const [selectedSize, setSelectedSize] = useState('');
-    const [selectedLineArt, setSelectedLineArt] = useState('Plain'); // Default to Plain
-    const [selectedWoodenStand, setSelectedWoodenStand] = useState('No Stand'); // Default to No Stand
-    const [basePrice, setBasePrice] = useState(0);  // Initialize as number
+    const [selectedLineArt, setSelectedLineArt] = useState('Plain');
+    const [selectedWoodenStand, setSelectedWoodenStand] = useState('No Stand');
+    const [basePrice, setBasePrice] = useState(0);
     const [quantity, setQuantity] = useState(1);
     const [totalPrice, setTotalPrice] = useState(0);
-    const [message, setMessage] = useState(""); // State for the message
+    const [message, setMessage] = useState("");
+    const [selectedImage, setSelectedImage] = useState('');
 
-    const { addToCart } = useCart(); // Access the addToCart function from the context
+    const { addToCart } = useCart();
 
     useEffect(() => {
         if (product) {
-            // Initial setup based on product options
             if (!selectedColor && product.options.some(opt => opt.name === "Color")) {
                 setSelectedColor(product.options.find(opt => opt.name === "Color")?.values[0]);
             }
@@ -41,46 +41,58 @@ const ProductDetails = () => {
         if (product) {
             let calculatedPrice = product?.prices?.[selectedSize] ?? product?.price ?? 0;
 
-            // Apply the price for the wooden stand if selected
             if (selectedWoodenStand === "With Stand" && product.standPrices) {
                 const standPrice = product.standPrices[selectedSize] ?? product.standPrices["With Stand"] ?? 0;
                 calculatedPrice += standPrice;
             }
 
-            // Apply the price for line art if selected
             if (selectedLineArt === "Line Art") {
-                const lineArtPrice = 395; // Add R395 for Line Art
-                calculatedPrice += lineArtPrice;
+                calculatedPrice += 395;
             }
 
-            // Update the base price and total price
             setBasePrice(calculatedPrice);
             setTotalPrice(calculatedPrice * quantity);
         }
     }, [selectedSize, selectedWoodenStand, quantity, selectedLineArt, product]);
 
-    const handleColorChange = (e) => setSelectedColor(e.target.value);
+    // Get the color-variant image (controlled by selectors)
+    const imageKey = `${selectedColor} ${selectedLineArt}`;
+    const colorVariantImage = product.images[imageKey] || product.images[selectedColor] || product.images["Midnight Sky Plain"] || "default-image.jpg";
+
+    // Main image: if user clicked a thumbnail, show that; otherwise show color variant
+    const mainImage = selectedImage || colorVariantImage;
+
+    // Reset to color variant when color/line art changes
+    const handleColorChange = (e) => {
+        setSelectedColor(e.target.value);
+        setSelectedImage('');
+    };
+
+    const handleLineArtChange = (e) => {
+        setSelectedLineArt(e.target.value);
+        setSelectedImage('');
+    };
+
     const handleSizeChange = (e) => setSelectedSize(e.target.value);
     const handleWoodenStandChange = (e) => setSelectedWoodenStand(e.target.value);
-    const handleLineArtChange = (e) => setSelectedLineArt(e.target.value);
 
     const handleQuantityChange = (e) => {
         const newQuantity = parseInt(e.target.value, 10);
         if (newQuantity >= 1) {
             setQuantity(newQuantity);
-            setTotalPrice(basePrice * newQuantity);  // Recalculate total price based on new quantity
+            setTotalPrice(basePrice * newQuantity);
         }
     };
 
     const incrementQuantity = () => {
         setQuantity((prev) => prev + 1);
-        setTotalPrice(basePrice * (quantity + 1));  // Recalculate total price based on incremented quantity
+        setTotalPrice(basePrice * (quantity + 1));
     };
 
     const decrementQuantity = () => {
         if (quantity > 1) {
             setQuantity((prev) => prev - 1);
-            setTotalPrice(basePrice * (quantity - 1));  // Recalculate total price based on decremented quantity
+            setTotalPrice(basePrice * (quantity - 1));
         }
     };
 
@@ -96,7 +108,7 @@ const ProductDetails = () => {
             id: product.id,
             handle: product.handle,
             title: product.title,
-            price: itemPrice,  
+            price: itemPrice,
             color: selectedColor,
             size: selectedSize,
             lineArt: selectedLineArt,
@@ -104,31 +116,50 @@ const ProductDetails = () => {
             quantity: quantity,
         };
 
-        addToCart(cartItem, quantity); // Add to cart
-        
-        // Show the message
+        addToCart(cartItem, quantity);
+
         const itemMessage = `${quantity} ${product.title}(s) added to cart!`;
         setMessage(itemMessage);
 
-        // Hide the message after 3 seconds
         setTimeout(() => {
-            setMessage(""); // Clear the message after 3 seconds
+            setMessage("");
         }, 3000);
     };
 
-    // Check if product has Size, Line Art, and Wooden Stand options
     const hasSizeOption = product.options?.some(opt => opt.name === "Size");
     const hasLineArtOption = product.options?.some(opt => opt.name === "Line Art");
     const hasWoodenStandOption = product.options?.some(opt => opt.name === "Wooden Stand");
 
-    // Determine the correct image based on color, line art, and size selection
-    const imageKey = `${selectedColor} ${selectedLineArt}`;
-    const productImage = product.images[imageKey] || product.images[selectedColor] || product.images["Midnight Sky Plain"] || "default-image.jpg"; // Fallback image
+    // Additional product photos from allImages
+    const galleryImages = product.allImages || [];
+    const hasGallery = galleryImages.length > 0;
 
     return (
         <div className="product-details">
             <div className="product-images">
-                <img src={productImage} alt={selectedColor} />
+                {/* Main Image */}
+                <div className="main-image-container">
+                    <img
+                        className="main-image"
+                        src={mainImage}
+                        alt={selectedColor}
+                    />
+                </div>
+
+                {/* Thumbnail Gallery */}
+                {hasGallery && (
+                    <div className="thumbnail-gallery">
+                        {galleryImages.map((img, index) => (
+                            <img
+                                key={index}
+                                className={`thumbnail ${mainImage === img ? 'active' : ''}`}
+                                src={img}
+                                alt={`${product.title} view ${index + 1}`}
+                                onClick={() => setSelectedImage(img)}
+                            />
+                        ))}
+                    </div>
+                )}
             </div>
 
             <div className="product-info">
@@ -145,7 +176,7 @@ const ProductDetails = () => {
                     </select>
                 </div>
 
-                {/* Size Selection - Only Show If Available */}
+                {/* Size Selection */}
                 {hasSizeOption && (
                     <div className="product-option">
                         <label>Size:</label>
@@ -157,18 +188,18 @@ const ProductDetails = () => {
                     </div>
                 )}
 
-                {/* Line Art Selection - Only Show If Available */}
+                {/* Line Art Selection */}
                 {hasLineArtOption && (
                     <div className="product-option">
                         <label>Line Art:</label>
                         <select value={selectedLineArt} onChange={handleLineArtChange}>
                             <option value="Plain">Plain</option>
-                            <option value="Line Art">With Line Art </option>
+                            <option value="Line Art">With Line Art</option>
                         </select>
                     </div>
                 )}
 
-                {/* Wooden Stand Selection - Only Show If Available */}
+                {/* Wooden Stand Selection */}
                 {hasWoodenStandOption && (
                     <div className="product-option">
                         <label>Wooden Stand:</label>
@@ -187,7 +218,7 @@ const ProductDetails = () => {
                     <button onClick={incrementQuantity}>+</button>
                 </div>
 
-                {/* Display Price with Currency Symbol */}
+                {/* Price */}
                 <p className="product-price">R{totalPrice.toFixed(2)}</p>
 
                 <button onClick={handleAddToCart}>Add to Cart</button>

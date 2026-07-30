@@ -9,6 +9,7 @@ const products = [
             "Tall Cactus": "https://i.ibb.co/V0FVWryH/10-1.png",
 
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -28,6 +29,7 @@ const products = [
            "Short Cactus": "https://i.ibb.co/qYypvtFK/9-1.png",
 
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -47,6 +49,7 @@ const products = [
            "Frog": "https://i.ibb.co/4wM4sssT/1-482a6e2b-b2c4-45a2-b7fd-21a7f6d5f3fb-1.png",
 
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -65,6 +68,7 @@ const products = [
         images: {
            "Mushroom": "https://i.ibb.co/1tmnvm60/4-5c4314b6-c7ad-4c3e-a97b-10c065564acc-1.png",
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -83,6 +87,7 @@ const products = [
         images: {
            "Gnome Pot Buddy": "https://i.ibb.co/sd25MMcH/7-1.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -109,6 +114,7 @@ const products = [
             "Nautilus Blue": "https://i.ibb.co/fY8sC5nk/Nautilus-Blue.png",
             "Aloe Leaf": "https://i.ibb.co/M3gF6GG/Aloe-Leafpng.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -135,6 +141,7 @@ const products = [
             "Nautilus Blue": "https://i.ibb.co/SwRrdN9t/Nautilus-Blue.png",
             "Aloe Leaf": "https://i.ibb.co/8nFBvw3M/Aloe-Leaf.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -161,6 +168,7 @@ const products = [
             "Nautilus Blue": "https://i.ibb.co/qYJrdczk/Nautilus-Blue.png",
             "Aloe Leaf": "https://i.ibb.co/pBQxTF6P/Aloe-Leaf.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -187,6 +195,7 @@ const products = [
             "Nautilus Blue": "https://i.ibb.co/7dHs38RK/Nautilus-Blue.png",
             "Aloe Leaf": "https://i.ibb.co/84gsHCQC/Aloe-Leaf.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -219,6 +228,7 @@ const products = [
             "Nautilus Blue": "https://i.ibb.co/yFNgjJ1M/Nautilus-Blue.png",
             "Aloe Leaf": "https://i.ibb.co/fV2TTDpP/Aloe-Leaf.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -249,6 +259,7 @@ const products = [
             "Nautilus Blue": "https://i.ibb.co/jpRYdp6/Nautilus-Blue.png",
             "Aloe Leaf": "https://i.ibb.co/842j044Y/Aloe-Leaf.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -275,6 +286,7 @@ const products = [
             "Nautilus Blue": "https://i.ibb.co/3y86mqD3/Nautilus-Blue.png",
             "Aloe Leaf": "https://i.ibb.co/LXpX8QY9/Aloe-leaf.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -301,6 +313,7 @@ const products = [
             "Nautilus Blue": "https://i.ibb.co/j9wKfJP2/Amy-Nautilus-Blue.png",
             "Aloe Leaf": "https://i.ibb.co/ycsRxFbJ/Amy-Aoe-Leaf.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -332,6 +345,7 @@ const products = [
             "Nautilus Blue": "https://i.ibb.co/gLYzXXJr/Nautilus-Blue.png",
             "Aloe Leaf": "https://i.ibb.co/wrYzbxBk/aloe-Leaf.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -367,6 +381,9 @@ const products = [
             "Nautilus Blue": "https://i.ibb.co/fY090yxX/Aloe-Leaf.png",
             "Aloe Leaf": "https://i.ibb.co/fY090yxX/Aloe-Leaf.png"
         },
+        allImages: [
+            "https://i.ibb.co/jkXxFpdB/New-yorker.png",
+        ],
         options: [
             {
                 name: "Color",
@@ -402,6 +419,7 @@ const products = [
             "Nautilus Blue": "https://i.ibb.co/gLYzXXJr/Nautilus-Blue.png",
             "Aloe Leaf": "https://i.ibb.co/wrYzbxBk/aloe-Leaf.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -437,6 +455,7 @@ const products = [
             "Nautilus Blue": "https://i.ibb.co/msgD9z8/Nautilus-Blue.png",
             "Aloe Leaf": "https://i.ibb.co/j9TkG02z/Aloe-Leaf.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -480,6 +499,7 @@ const products = [
             "Aloe Leaf Plain": "https://i.ibb.co/G456hbgV/Aloe-Leaf.png",
             "Aloe Leaf Line Art": "https://i.ibb.co/5hPdRjmQ/Picsart-23-07-06-09-49-16-980.webp"
         },
+        allImages: [],
         options: [
             { name: "Color", values: ["Midnight Sky", "Aluminum Snow", "Frosted Cube", "Dry Gold", "Night Jewl", "Canyon Wall", "Mountain Stream", "Nautilus Blue", "Aloe Leaf"] },
             { name: "Size", values: ["Medium H=65cm W=36cm", "Large H=80cm W=36cm"] },
@@ -517,6 +537,7 @@ const products = [
             "Aloe Leaf Plain": "https://i.ibb.co/q3KzrFLL/Aloe-Leaf.png",
             "Aloe Leaf Line Art": "https://i.ibb.co/5hPdRjmQ/Picsart-23-07-06-09-49-16-980.webp"
         },
+        allImages: [],
         options: [
             { name: "Color", values: ["Midnight Sky", "Aluminum Snow", "Frosted Cube", "Dry Gold", "Night Jewl", "Canyon Wall", "Mountain Stream", "Nautilus Blue", "Aloe Leaf"] },
             { name: "Size", values: ["Medium H=36cm x W=39.5cm", "Large H=43cm W=46.5cm"] },
@@ -543,6 +564,7 @@ const products = [
             "Nautilus Blue": "https://i.ibb.co/WNVM6kSV/Nautilus-Blue.png",
             "Aloe Leaf": "https://i.ibb.co/nqL0d808/Aloe-Leaf.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -577,6 +599,7 @@ const products = [
             "Nautilus Blue": "https://i.ibb.co/7xLVwVB7/Nautilus-Blue.png",
             "Aloe Leaf": "https://i.ibb.co/N6QvJm7X/Aloe-Leaf.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -615,6 +638,7 @@ const products = [
             "Nautilus Blue": "https://i.ibb.co/xKD2TMxZ/Nautilus-Blue.png",
             "Aloe Leaf": "https://i.ibb.co/9kzsDkSz/Aloe-Leaf.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -638,6 +662,7 @@ const products = [
         images: {
            "Buddha Candle Holder": "https://i.ibb.co/9992d7P0/Picsart-23-07-26-14-42-19-795-1.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -664,6 +689,7 @@ const products = [
             "Nautilus Blue": "https://i.ibb.co/nsXR4sDK/Nautilus-Blue-Hands2.png",
             "Aloe Leaf": "https://i.ibb.co/14RSkvY/Aloe-Leaf-Hands2.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -690,6 +716,7 @@ const products = [
             "Nautilus Blue": "https://i.ibb.co/Xrz9vy1D/Nautilus-Blue-Heart.png",
             "Aloe Leaf": "https://i.ibb.co/ccJJZ4rt/Aloe-Leaf-heart.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -716,6 +743,7 @@ const products = [
             "Nautilus Blue": "https://i.ibb.co/4Z4bR92t/Nautilus-Blue.png",
             "Aloe Leaf": "https://i.ibb.co/R4CjkTbJ/Aloe-Leaf.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -734,6 +762,7 @@ const products = [
         images: {
            "Resin Buddha Head": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Picsart_23-07-26_14-38-57-684.png?v=1694974259"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -752,6 +781,7 @@ const products = [
         images: {
            "Resin Tree Stump Planter": "https://i.ibb.co/cSNjs0CW/Picsart-23-07-26-15-02-35-640-1.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -770,6 +800,7 @@ const products = [
         images: {
            "Resin Excited Groot Mini Planter": "https://i.ibb.co/T58MrPm/Picsart-23-07-26-15-03-48-184-1.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",
@@ -788,6 +819,7 @@ const products = [
         images: {
            "Resin Folded Arms Groot Mini Planter": "https://i.ibb.co/wN5BzwkY/Picsart-23-07-26-15-06-17-227-1.png"
         },
+        allImages: [],
         options: [
             {
                 name: "Color",

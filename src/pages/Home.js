@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import FeaturedCarousel from "../components/FeaturedCarousel";
 import "../styles/Home.css";
 import paletteImage from "../assets/palette.png";  // Import the new banner image
 import leftImage from "../assets/left.jpg";  // Keep the left image
@@ -40,6 +41,9 @@ const Home = () => {
                         <img src={rightImage} alt="Decorative plant arrangement on the right" className="right-image" />
                     </div>
                 </div>
+
+                {/* Featured Products Carousel */}
+                <FeaturedCarousel />
 
                 {/* Palette Banner Image below the text and images */}
                 <img src={paletteImage} alt="Colorful palette of planters" className="home-banner" />

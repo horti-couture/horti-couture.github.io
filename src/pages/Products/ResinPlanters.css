@@ -9,55 +9,13 @@
 /* Product List Grid */
 .product-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px; /* Space between products */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
     justify-content: center;
     align-items: start;
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-/* Responsive Grid Breakpoints */
-@media (max-width: 600px) {
-    /* Ensuring 2 products per row on small screens */
-    .product-list {
-        grid-template-columns: repeat(2, minmax(150px, 1fr)); /* Ensuring that each product has enough space */
-    }
-
-    .product-card {
-        padding: 10px;
-        border-radius: 6px;
-    }
-
-    .product-card img {
-        height: 140px; /* Slightly smaller image */
-    }
-
-    .product-card h3 {
-        font-size: 14px;
-    }
-
-    .product-card p {
-        font-size: 12px;
-    }
-
-    .product-card .buy-btn {
-        font-size: 12px;
-        padding: 6px 10px;
-    }
-}
-
-@media (min-width: 601px) and (max-width: 1024px) {
-    .product-list {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (min-width: 1025px) {
-    .product-list {
-        grid-template-columns: repeat(5, 1fr);
-    }
 }
 
 /* Product Card Styling */
@@ -124,4 +82,46 @@
 
 .product-card .buy-btn:hover {
     background: #0056b3;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .product-card {
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .product-card img {
+        height: 140px;
+    }
+
+    .product-card h3 {
+        font-size: 14px;
+    }
+
+    .product-card p {
+        font-size: 12px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .product-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .product-list {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
 }
