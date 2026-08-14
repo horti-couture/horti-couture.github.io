@@ -102,7 +102,7 @@ const products = [
         handle: "emma-15cm-resin-planter",
         title: "Emma 15cm Resin Planter",
         description: "This stylish and durable 15cm Resin Planter is a great choice for any décor. Featuring a unique modern design and high-quality resin construction, it makes an attractive addition to any home. This planter is UV and weather-resistant, offering long-lasting use for all your planting needs.",
-        price: 235.00,
+        price: 165.00,
         images: {
             "Midnight Sky": "https://i.ibb.co/tP3NRT3R/Midnight-Sky.png",
             "Aluminum Snow": "https://i.ibb.co/MkpHnkNr/Aluminum-Snow.png",
@@ -129,7 +129,7 @@ const products = [
         handle: "casey-15cm-resin-planter",
         title: "Casey 15cm Resin Planter",
         description: "This stylish and durable 15cm Resin Planter is a great choice for any décor. Featuring a unique modern design and high-quality resin construction, it makes an attractive addition to any home. This planter is UV and weather-resistant, offering long-lasting use for all your planting needs.",
-        price: 235.00,
+        price: 165.00,
         images: {
             "Midnight Sky": "https://i.ibb.co/x8tn845z/Midnight-Sky.png",
             "Aluminum Snow": "https://i.ibb.co/dsvjMrrt/Aluminium-Snow.png",
@@ -156,7 +156,7 @@ const products = [
         handle: "tina-15cm-resin-planter",
         title: "Tina 15cm Resin Planter",
         description: "This stylish and durable 15cm Resin Planter is a great choice for any décor. Featuring a unique modern design and high-quality resin construction, it makes an attractive addition to any home. This planter is UV and weather-resistant, offering long-lasting use for all your planting needs.",
-        price: 235.00,
+        price: 165.00,
         images: {
             "Midnight Sky": "https://i.ibb.co/DDYZRRkc/Midnight-Sky.png",
             "Aluminum Snow": "https://i.ibb.co/tM8XWVgq/Aluminum-Snow.png",
@@ -183,7 +183,7 @@ const products = [
         handle: "anna-15cm-resin-planter",
         title: "Anna 15cm Resin Planter",
         description: "This stylish and durable 15cm Resin Planter is a great choice for any décor. Featuring a unique modern design and high-quality resin construction, it makes an attractive addition to any home. This planter is UV and weather-resistant, offering long-lasting use for all your planting needs.",
-        price: 235.00,
+        price: 165.00,
         images: {
             "Midnight Sky": "https://i.ibb.co/chtVJDPd/Midnight-Sky.png",
             "Aluminum Snow": "https://i.ibb.co/hx60MhrV/Aluminum-Snow.png",
@@ -212,10 +212,10 @@ const products = [
         description: "TC Style Resin Planters offer beautiful terracotta style containers with the convenience of a lightweight, durable resin construction. Available in 15cm, 8cm, 6cm, and 5cm sizes to suit any size planting requirements.",
         price: 25,  // Default price (smallest size)
         prices: {
-            "5cm": 16.35,
-            "6cm": 19.60,
-            "8cm": 25,
-            "15cm": 75
+            "5cm": 25,
+            "6cm": 30,
+            "8cm": 50,
+            "15cm": 120
         },
         images: {
             "Midnight Sky": "https://i.ibb.co/VWm2qt1h/Midnight-Sky.png",
@@ -247,7 +247,7 @@ const products = [
         handle: "ruby-resin-planter",
         title: "Ruby Resin Planter",
         description: "This Ruby Resin Planter is perfect for your home garden. Crafted from durable resin, this planter measures 9cm x 11.5cm and is designed to stand the test of time. With a modern design, this planter is sure to become the focal point of your home garden.",
-        price: 54.00,
+        price: 55.00,
         images: {
             "Midnight Sky": "https://i.ibb.co/9m6753Hv/Midnight-Sky.png",
             "Aluminum Snow": "https://i.ibb.co/zhPsGjhr/Aluminium-Snow.png",
@@ -274,7 +274,7 @@ const products = [
         handle: "evie-resin-planter",
         title: "Evie Resin Planter",
         description: "The Evie Resin Planter is a lightweight and durable planter with a size of 9cm x 10cm. Its resin material makes it resistant to UV radiation, water and wear, making it suitable for both indoor and outdoor use.",
-        price: 43.00,
+        price: 45.00,
         images: {
             "Midnight Sky": "https://i.ibb.co/spZkhsBH/Midnight-Sky.png",
             "Aluminum Snow": "https://i.ibb.co/JjDzwLQx/Aluminium-Snow.png",
@@ -301,7 +301,7 @@ const products = [
         handle: "amy-resin-planter",
         title: "Amy Resin Planter",
         description: "The Amy Resin Planter is perfect for displaying your favorite plants. Crafted from a durable resin material, this 7.5cm x 8.5cm planter is designed to hold plants while providing an aesthetically pleasing look. A great addition to any indoor or outdoor garden.",
-        price: 32.50,
+        price: 40.00,
         images: {
             "Midnight Sky": "https://i.ibb.co/60vN7hMq/Amy-Midnight-Sky.png",
             "Aluminum Snow": "https://i.ibb.co/vC3798h6/Amy-Aluminum-Snow.png",
@@ -330,9 +330,9 @@ const products = [
         description: "Our Boston Fiberglass Planters are the perfect way to bring life to any indoor or outdoor space. Available in three sizes, these rectangle shaped planters are made from highly durable and weather-resistant fiberglass. With this planter, you can be certain that your plants will be safe and stylish at the same time.\n\nAll our Fiberglass Planters come with liners and watering systems (liner reservoirs) for easy maintenance and plant care.",
         price: 3679.65,  // Default price (smallest size)
         prices: {
-            "Small H=50cm W=45cm L110=cm": 3384.35,
-            "Medium H=65cm W=45cm L110=cm": 4237.50,
-            "Large H=80cm W=45cm L110=cm":  5316.65
+            "Small H=50cm W=45cm L110=cm": 3679.65,
+            "Medium H=65cm W=45cm L110=cm": 4231.60,
+            "Large H=80cm W=45cm L110=cm":  4788.59
         },
         images: {
             "Midnight Sky": "https://i.ibb.co/NnFb7g6X/Midnight-Sky.png",
@@ -366,9 +366,9 @@ const products = [
         description: "The New Yorker Fiberglass planters are ideal for both indoor and outdoor use. Offered in 3 sizes (50cm, 65cm, and 80cm high), these planters are lightweight and durable, crafted from all-weather fiberglass to withstand various weather conditions. With their modern design, these planters are perfect for any design aesthetic.\n\nAll our Fiberglass Planters come with liners and watering systems (liner reservoirs) for easy maintenance and plant care.",
         price: 2375.75,  // Default price (smallest size)
         prices: {
-            "Small H=50cm W=45cm": 2254.35,
-            "Medium H=65cm W=45cm": 2593.35,
-            "Large H=80cm W=45cm":  2932.50
+            "Small H=50cm W=45cm": 2375.75,
+            "Medium H=65cm W=45cm": 2469.68,
+            "Large H=80cm W=45cm":  2574.94
         },
         images: {
             "Midnight Sky": "https://i.ibb.co/FbNfxKn9/Midnight-Sky.png",
@@ -404,9 +404,9 @@ const products = [
         description: "Lightweight and durable, these Paris Fiberglass Planters are constructed with a high-quality fiberglass material, making them suitable for interior and exterior use. Their sleek, contemporary design will serve as a stylish accent to any space. The planters are available in 3 sizes.\n\nAll our Fiberglass Planters come with liners and watering systems (liner reservoirs) for easy maintenance and plant care.",
         price: 3460.65,  // Default price (smallest size)
         prices: {
-            "Small H=50cm W=38cm L=100=cm": 3050.00,
-            "Medium H=65cm W=38cm L=100=cm": 3815.75,
-            "Large H=80cm W=38cm L=100=cm":  4805.50 
+            "Small H=50cm W=38cm L=100=cm": 3460.65,
+            "Medium H=65cm W=38cm L=100=cm": 3680.25,
+            "Large H=80cm W=38cm L=100=cm":  3875.24
         },
         images: {
             "Midnight Sky": "https://i.ibb.co/NnFb7g6X/Midnight-Sky.png",
@@ -440,9 +440,9 @@ const products = [
         description: "The Nile Fiberglass Planters offer a sleek, modern aesthetic and come with the convenience of being available in 3 sizes. The fiberglass material ensures the planters are strong and durable, and they're also lightweight. Create your own outdoor oasis with these stylish and timeless planters.\n\nAll our Fiberglass Planters come with liners and watering systems (liner reservoirs) for easy maintenance and plant care.",
         price: 1911.66,  // Default price (smallest size)
         prices: {
-            "Small H=50cm W=36cm": 2034.00,
-            "Medium H=65cm W=36cm": 2254.35,
-            "Large H=80cm W=36cm": R2474.50
+            "Small H=50cm W=36cm": 1911.66,
+            "Medium H=65cm W=36cm": 1989.00,
+            "Large H=80cm W=36cm":  2071.88
         },
         images: {
             "Midnight Sky": "https://i.ibb.co/3msZLpn5/Midnight-Sky.png",
@@ -476,8 +476,8 @@ const products = [
         description: "Elevate your outdoor space with the stylish Everest Fiberglass Planters. Perfect for larger plants, these lightweight planters come in two sizes: large (H=75cm, W=73cm) and small (H=60cm, W=73cm). Whether you're looking for a subtle accent or an eye-catching focal point, Everest planters will make any greenery and patio design stand out.\n\nFor line art options, after placing an order, a sales agent will contact you to discuss color choices. Please specify your preferred top coat color when placing your order.\n\nAll our Fiberglass Planters come with liners and watering systems (liner reservoirs) for easy maintenance and plant care.",
         price: 3246.50,  
         prices: {
-            "Medium H=65cm W=36cm": 3926.75,
-            "Large H=80cm W=36cm": 4350.50
+            "Medium H=65cm W=36cm": 3246.50,
+            "Large H=80cm W=36cm": 3610.00
         },
         images: {
             "Midnight Sky Plain": "https://i.ibb.co/XMkxNy3/Midnight-Sky.png",
@@ -514,8 +514,8 @@ const products = [
         description: "Enjoy a modern look outdoors with these stylish fiberglass Victoria planters. Choose between the Large Victoria, measuring 43cm high by 46.5cm wide, or the Medium Victoria, measuring 36cm high by 39.5cm wide. These sleek planters will provide an elegant touch to your home's exterior.\n\nFor line art options, after placing an order, a sales agent will contact you to discuss color choices. Please specify your preferred top coat color when placing your order.\n\nAll our Fiberglass Planters come with liners and watering systems (liner reservoirs) for easy maintenance and plant care.",
         price: 3246.50,  
         prices: {
-            "Medium H=36cm x W=39.5cm": 1495.00,
-            "Large H=43cm W=46.5cm": 2141.35
+            "Medium H=36cm x W=39.5cm": 1260.00,
+            "Large H=43cm W=46.5cm": 1775.00
         },
         images: {
             "Midnight Sky Plain": "https://i.ibb.co/8gDcRfQz/Midnight-Sky.png",
@@ -552,7 +552,7 @@ const products = [
         handle: "barcelona-ceramic-planter",
         title: "Barcelona Ceramic Planter",
         description: "The Barcelona Ceramic Planter is a one-of-a-kind, modern-style accessory for any decor. A unique-looking planter with a height of 12.5cm and a width of 34cm, it provides an eye-catching, vibrant look that adds a unique statement to any room.",
-        price: 788.75,
+        price: 698.00,
         images: {
             "Midnight Sky": "https://i.ibb.co/chjdLJ9n/Midnight-Sky.png",
             "Aluminum Snow": "https://i.ibb.co/k61tB70k/Aluminum-Snow.png",
@@ -581,12 +581,12 @@ const products = [
         description: "Cairo Ceramic Planters are the perfect addition to any indoor or outdoor garden. These planters are available in two sizes and come with or without wooden stands. Durable ceramic construction and a range of sizes ensure that you can find the perfect planter for any gardening occasion.",
         price: 500.00,  // Base price without stand
         prices: {
-            "Small": 536.75,
-            "Medium": 615.85,
+            "Small": 500.00,
+            "Medium": 600.00,
         },
         standPrices: {
-            "Small": 397,  // Price for small stand
-            "Medium": 465, // Price for medium stand
+            "Small": 352,  // Price for small stand
+            "Medium": 412, // Price for medium stand
         },
         images: {
             "Midnight Sky": "https://i.ibb.co/MyzT5yt4/Midnight-Sky.png",
@@ -622,10 +622,10 @@ const products = [
         handle: "amazon-ceramic-planter",
         title: "Amazon Ceramic Planter",
         description: "This Amazon Ceramic Planter offers a large, 36 x 33 cm surface area, perfect for displaying larger plants and flowers in any room. Available with or without a wooden stand to easily elevate your plants and match your home decor.",
-        price: 1075.00,  // Base price without stand
+        price: 885.00,  // Base price without stand
 
         standPrices: {
-            "With Stand": 465.00,  // Price for large stand
+            "With Stand": 412.00,  // Price for small stand
         },
         images: {
             "Midnight Sky": "https://i.ibb.co/hFsYWqQQ/Midnight-Sky.png",
@@ -658,7 +658,7 @@ const products = [
         handle: "resin-buddha-candle-holder",
         title: "Resin Buddha Candle Holder",
         description: "This beautiful Resin Buddha Candle Holder is perfect for adding a spiritual touch to your home. With a 19.5cm height and 13cm width, this holder is the perfect size to fit any decoration. Crafted from high-quality resin, it is sure to last for years to come.",
-        price: 325.00,
+        price: 400.00,
         images: {
            "Buddha Candle Holder": "https://i.ibb.co/9992d7P0/Picsart-23-07-26-14-42-19-795-1.png"
         },
@@ -704,7 +704,7 @@ const products = [
         handle: "resin-heart-container",
         title: "Resin Heart Container",
         description: "Add a touch of love and elegance to your home with our Heart-Shaped Resin Container. This beautifully crafted piece is more than just a container—it's a symbol of affection and style. Whether you're looking to plant your favorite small succulents or store cherished jewelry, this versatile container meets your needs with grace.",
-        price: 58.00,
+        price: 65.00,
         images: {
             "Midnight Sky": "https://i.ibb.co/1tpWRzxY/Midnight-Sky-Heart.png",
             "Aluminum Snow": "https://i.ibb.co/4ZSXZXWY/Aluminum-Snow-Heart.png",
@@ -731,7 +731,7 @@ const products = [
         handle: "resin-laughing-buddha",
         title: "Resin Laughing Buddha",
         description: "This Resin Laughing Buddha statue stands 19.5cm tall and 17.5cm wide, making it perfect for displaying anywhere in your home. Its detailed features and friendly expression will be sure to delight family and friends.",
-        price: 240.00,
+        price: 400.00,
         images: {
             "Midnight Sky": "https://i.ibb.co/JjdryqpW/Picsart-23-07-26-14-36-27-735.png",
             "Aluminum Snow": "https://i.ibb.co/sJqwPf21/Aluminium-Snow.png",
@@ -758,7 +758,7 @@ const products = [
         handle: "resin-buddha-head",
         title: "Resin Buddha Head",
         description: "This beautiful resin Buddha Head stands 23.5cm tall and is 12cm wide, with a stunningly detailed finish. Crafted with exquisite care, it is the perfect addition to any home - bringing peace and tranquility to your interior space.",
-        price: 325.00,
+        price: 400.00,
         images: {
            "Resin Buddha Head": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Picsart_23-07-26_14-38-57-684.png?v=1694974259"
         },
@@ -777,7 +777,7 @@ const products = [
         handle: "resin-tree-stump-planter",
         title: "Resin Tree Stump Planter",
         description: "This 7-cm-high, 10-cm-wide Resin Tree Stump Planter is perfect for brightening up indoor and outdoor areas with small plants, succulents, and shrubs. Crafted from weather-resistant resin, it's designed to last for years with minimal care.",
-        price: 65.00,
+        price: 70.00,
         images: {
            "Resin Tree Stump Planter": "https://i.ibb.co/cSNjs0CW/Picsart-23-07-26-15-02-35-640-1.png"
         },
@@ -796,7 +796,7 @@ const products = [
         handle: "resin-excited-groot-mini-planter",
         title: "Resin Excited Groot Mini Planter",
         description: "This Resin Excited Groot Mini Planter is a perfect addition to your home or office. It stands 14cm high and measures 15cm wide, making it a great feature piece that won't take up too much space. With the groot-shaped design, you can add a splash of life to any room.",
-        price: 220.00,
+        price: 200.00,
         images: {
            "Resin Excited Groot Mini Planter": "https://i.ibb.co/T58MrPm/Picsart-23-07-26-15-03-48-184-1.png"
         },
@@ -815,7 +815,7 @@ const products = [
         handle: "resin-folded-arms-groot-mini-planter",
         title: "Resin Folded Arms Groot Mini Planter",
         description: "This Resin Folded Arms Groot Mini Planter is the perfect size for your indoor plants. At 14cm high and 11cm wide, it's small enough to fit on a windowsill or desk, but large enough to make an impression. Made of durable resin, this stylish planter is designed to last.",
-        price: 220.00,
+        price: 200.00,
         images: {
            "Resin Folded Arms Groot Mini Planter": "https://i.ibb.co/wN5BzwkY/Picsart-23-07-26-15-06-17-227-1.png"
         },
