@@ -442,7 +442,7 @@ const products = [
         prices: {
             "Small H=50cm W=36cm": 2034.00,
             "Medium H=65cm W=36cm": 2254.35,
-            "Large H=80cm W=36cm": R2474.50
+            "Large H=80cm W=36cm": 2474.50
         },
         images: {
             "Midnight Sky": "https://i.ibb.co/3msZLpn5/Midnight-Sky.png",
