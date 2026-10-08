@@ -636,7 +636,7 @@ const products = [
             "Canyon Wall": "https://i.ibb.co/BKwGJ48s/Canyon-Wall.png",
             "Mountain Stream": "https://i.ibb.co/gbRRHpwj/Mountain-Stream.png",
             "Nautilus Blue": "https://i.ibb.co/xKD2TMxZ/Nautilus-Blue.png",
-            "Aloe Leaf": "https://i.ibb.co/9kzsDkSz/Aloe-Leaf.png"
+            "Aloe Leaf": "https://res.cloudinary.com/eunzhgad/image/upload/v1791462806/Aloe_Leaf.webp"
         },
         allImages: [],
         options: [
