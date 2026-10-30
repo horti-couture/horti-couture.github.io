@@ -828,6 +828,38 @@ const products = [
         ],
         category: "Mini Planters"
     },
+
+    {
+        id: 31,
+        handle: "polypropylene-liner",
+        title: "Polypropylene Liner",
+        description: "Our Self-Watering Plant Liners take the guesswork out of plant care, keeping your plants healthy with minimal effort. Offered in 4 sizes (25cm round, 29cm square stacker, 32cm round, and 40cm round), these liners turn a compatible planter into a low-maintenance home for thriving plants. Simply fill the reservoir and enjoy 2 to 3 weeks of worry-free watering.\n\nHow it works: water is added through the fill pipe and collects in the reservoir at the base. Capillary stones in the soil deck absorb only what they can hold, so roots draw moisture as they need it and never sit in soggy soil. This helps prevent root rot, disease and early plant loss. The cap gauge shows the water level, so you always know when it's time to top up.\n\nSetup is as easy as 1, 2, 3: insert the sealing plug and soil deck into the bottom of the pot, add the capillary stones and fill pipe, then plant your plant. The fill pipe also makes adding liquid fertiliser quick and mess-free.\n\nPlease choose the size that matches your planter.",
+        price: 325.00 ,  // Default price (smallest size)
+        prices: {
+            "25cm round": 325.00,
+            "32cm round": 395.00,
+            "40cm round": 475.00,
+            "29cm square": 325.00
+        },
+        images: {
+            "Black": "https://res.cloudinary.com/eunzhgad/image/upload/v1793346717/1.webp",
+        },
+        allImages: [
+            "https://res.cloudinary.com/eunzhgad/image/upload/v1793346717/2.webp",
+            "https://res.cloudinary.com/eunzhgad/image/upload/v1793346718/photo1.webp",
+        ],
+        options: [
+            {
+                name: "Color",
+                values: ["Black"]
+            },
+            {
+                name: "Size",
+                values: ["25cm round", "32cm round", "40cm round", "29cm square"]
+            }
+        ],
+        category: "Accessories"
+    },
 ];
 
 export default products;

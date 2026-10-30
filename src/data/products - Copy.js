@@ -104,15 +104,15 @@ const products = [
         description: "This stylish and durable 15cm Resin Planter is a great choice for any décor. Featuring a unique modern design and high-quality resin construction, it makes an attractive addition to any home. This planter is UV and weather-resistant, offering long-lasting use for all your planting needs.",
         price: 235.00,
         images: {
-            "Midnight Sky": "https://i.ibb.co/tP3NRT3R/Midnight-Sky.png",
-            "Aluminum Snow": "https://i.ibb.co/MkpHnkNr/Aluminum-Snow.png",
-            "Frosted Cube": "https://i.ibb.co/LXjkBctK/Frosted-Cube.png",
-            "Dry Gold": "https://i.ibb.co/XvRsSQf/Dry-Gold.png",
+            "Midnight Sky": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464203/Emma_Midnight_Sky.webp",
+            "Aluminum Snow": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464194/Emma_Aluminum_Snow.webp",
+            "Frosted Cube": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464194/Emma_Aluminum_Snow.webp",
+            "Dry Gold": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464197/Emma_Dry_Gold.webp",
             "Night Jewl": "https://i.ibb.co/tPw392Yp/Picsart-23-07-08-11-46-03-172.png",
-            "Canyon Wall": "https://i.ibb.co/Rp42QWf1/Canyon-Wall.png",
-            "Mountain Stream": "https://i.ibb.co/yFWDsLRf/Mountain-Stream.png",
-            "Nautilus Blue": "https://i.ibb.co/fY8sC5nk/Nautilus-Blue.png",
-            "Aloe Leaf": "https://i.ibb.co/M3gF6GG/Aloe-Leafpng.png"
+            "Canyon Wall": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464196/Emma_Canyon_Wall.webp",
+            "Mountain Stream": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464204/Emma_Mountain_Stream.webp",
+            "Nautilus Blue": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464206/Emma_Nautilus_Blue.webp",
+            "Aloe Leaf": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464193/Emma_Aloe_Leafpng.webp"
         },
         allImages: [],
         options: [
@@ -131,15 +131,15 @@ const products = [
         description: "This stylish and durable 15cm Resin Planter is a great choice for any décor. Featuring a unique modern design and high-quality resin construction, it makes an attractive addition to any home. This planter is UV and weather-resistant, offering long-lasting use for all your planting needs.",
         price: 235.00,
         images: {
-            "Midnight Sky": "https://i.ibb.co/x8tn845z/Midnight-Sky.png",
-            "Aluminum Snow": "https://i.ibb.co/dsvjMrrt/Aluminium-Snow.png",
-            "Frosted Cube": "https://i.ibb.co/JPL76M2/Frosted-Cube.png",
-            "Dry Gold": "https://i.ibb.co/kg2dN9r3/Dry-Gold.png",
-            "Night Jewl": "https://i.ibb.co/N6w0KVdY/Picsart-23-07-25-11-35-33-719.png",
-            "Canyon Wall": "https://i.ibb.co/0Rb4MxkF/Canyon-Wall.png",
-            "Mountain Stream": "https://i.ibb.co/3mdtwL3r/Mountain-Stream.png",
-            "Nautilus Blue": "https://i.ibb.co/SwRrdN9t/Nautilus-Blue.png",
-            "Aloe Leaf": "https://i.ibb.co/8nFBvw3M/Aloe-Leaf.png"
+            "Midnight Sky": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464187/Casey_Midnight_Sky.webp",
+            "Aluminum Snow": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464180/Casey_Aluminium_Snow.webp",
+            "Frosted Cube": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464184/Casey_Frosted_Cube.webp",
+            "Dry Gold": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464183/Casey_Dry_Gold.webp",
+            "Night Jewl": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464191/Casey_Night_Jewl.webp",
+            "Canyon Wall": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464182/Casey_Canyon_Wall.webp",
+            "Mountain Stream": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464189/Casey_Mountain_Stream.webp",
+            "Nautilus Blue": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464190/Casey_Nautilus_Blue.webp",
+            "Aloe Leaf": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464179/Casey_Aloe_Leaf.webp"
         },
         allImages: [],
         options: [
@@ -158,15 +158,15 @@ const products = [
         description: "This stylish and durable 15cm Resin Planter is a great choice for any décor. Featuring a unique modern design and high-quality resin construction, it makes an attractive addition to any home. This planter is UV and weather-resistant, offering long-lasting use for all your planting needs.",
         price: 235.00,
         images: {
-            "Midnight Sky": "https://i.ibb.co/DDYZRRkc/Midnight-Sky.png",
-            "Aluminum Snow": "https://i.ibb.co/tM8XWVgq/Aluminum-Snow.png",
-            "Frosted Cube": "https://i.ibb.co/RVY3NfF/Frosted-Cube.png",
-            "Dry Gold": "https://i.ibb.co/8LbPc0xy/Dry-Gold.png",
-            "Night Jewl": "https://i.ibb.co/rR2xhszH/Night-Jewel.png",
-            "Canyon Wall": "https://i.ibb.co/zTrh9k7r/Canyon-Wall.png",
-            "Mountain Stream": "https://i.ibb.co/Z1SZYfFd/Mountain-Stream.png",
-            "Nautilus Blue": "https://i.ibb.co/qYJrdczk/Nautilus-Blue.png",
-            "Aloe Leaf": "https://i.ibb.co/pBQxTF6P/Aloe-Leaf.png"
+            "Midnight Sky": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464775/Tina_Midnight_Sky.webp",
+            "Aluminum Snow": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464761/Tina_Aluminum_Snow.webp",
+            "Frosted Cube": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464769/Tina_Frosted_Cube.webp",
+            "Dry Gold": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464767/Tina_Dry_Gold.webp",
+            "Night Jewl": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464783/Tina_Night_Jewel.webp",
+            "Canyon Wall": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464764/Tina_Canyon_Wall.webp",
+            "Mountain Stream": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464777/Tina_Mountain_Stream.webp",
+            "Nautilus Blue": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464780/Tina_Nautilus_Blue.webp",
+            "Aloe Leaf": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464758/Tina_Aloe_Leaf.webp"
         },
         allImages: [],
         options: [
@@ -185,15 +185,15 @@ const products = [
         description: "This stylish and durable 15cm Resin Planter is a great choice for any décor. Featuring a unique modern design and high-quality resin construction, it makes an attractive addition to any home. This planter is UV and weather-resistant, offering long-lasting use for all your planting needs.",
         price: 235.00,
         images: {
-            "Midnight Sky": "https://i.ibb.co/chtVJDPd/Midnight-Sky.png",
-            "Aluminum Snow": "https://i.ibb.co/hx60MhrV/Aluminum-Snow.png",
-            "Frosted Cube": "https://i.ibb.co/HTpxDyPT/Frosted-Cube.png",
-            "Dry Gold": "https://i.ibb.co/twPMgjY6/Dry-Gold.png",
-            "Night Jewl": "https://i.ibb.co/6J1pSsQB/Night-Jewel.png",
-            "Canyon Wall": "https://i.ibb.co/Y7SjFd29/Canyon-Wall.png",
-            "Mountain Stream": "https://i.ibb.co/MDJHgxF2/Mountain-Stream.png",
-            "Nautilus Blue": "https://i.ibb.co/7dHs38RK/Nautilus-Blue.png",
-            "Aloe Leaf": "https://i.ibb.co/84gsHCQC/Aloe-Leaf.png"
+            "Midnight Sky": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464052/Anna_Midnight_Sky.webp",
+            "Aluminum Snow": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464047/Anna_Aluminum_Snow.webp",
+            "Frosted Cube": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464050/Anna_Frosted_Cube.webp",
+            "Dry Gold": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464049/Anna_Dry_Gold.webp",
+            "Night Jewl": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464056/Anna_Night_Jewel.webp",
+            "Canyon Wall": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464048/Anna_Canyon_Wall.webp",
+            "Mountain Stream": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464053/Anna_Mountain_Stream.webp",
+            "Nautilus Blue": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464054/Anna_Nautilus_Blue.webp",
+            "Aloe Leaf": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464046/Anna_Aloe_Leaf.webp"
         },
         allImages: [],
         options: [
@@ -218,15 +218,15 @@ const products = [
             "15cm": 75
         },
         images: {
-            "Midnight Sky": "https://i.ibb.co/VWm2qt1h/Midnight-Sky.png",
-            "Aluminum Snow": "https://i.ibb.co/27bf5Mz7/Aluminum-Snow.png",
-            "Frosted Cube": "https://i.ibb.co/SDK8KHt5/Frosted-Cube.png",
-            "Dry Gold": "https://i.ibb.co/JjBb2gwT/Dry-Gold.png",
-            "Night Jewl": "https://i.ibb.co/PGG1Dt6X/Night-Jewel.png",
-            "Canyon Wall": "https://i.ibb.co/KRFCyXr/Canyon-Wall.png",
-            "Mountain Stream": "https://i.ibb.co/vbHR6kS/Mountain-Stream.png",
-            "Nautilus Blue": "https://i.ibb.co/yFNgjJ1M/Nautilus-Blue.png",
-            "Aloe Leaf": "https://i.ibb.co/fV2TTDpP/Aloe-Leaf.png"
+            "Midnight Sky": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464698/TC_Range_6_Midnight_Sky.webp",
+            "Aluminum Snow": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464686/TC_Range_6_Aluminum_Snow.webp",
+            "Frosted Cube": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464693/TC_Range_6_Frosted_Cube.webp",
+            "Dry Gold": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464690/TC_Range_6_Dry_Gold.webp",
+            "Night Jewl": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464706/TC_Range_6_Night_Jewel.webp",
+            "Canyon Wall": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464688/TC_Range_6_Canyon_Wall.webp",
+            "Mountain Stream": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464700/TC_Range_6_Mountain_Steream.webp",
+            "Nautilus Blue": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464703/TC_Range_6_Nautilus_Blue.webp",
+            "Aloe Leaf": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464683/TC_Range_6_Aloe_Leaf.webp"
         },
         allImages: [],
         options: [
@@ -249,15 +249,15 @@ const products = [
         description: "This Ruby Resin Planter is perfect for your home garden. Crafted from durable resin, this planter measures 9cm x 11.5cm and is designed to stand the test of time. With a modern design, this planter is sure to become the focal point of your home garden.",
         price: 54.00,
         images: {
-            "Midnight Sky": "https://i.ibb.co/9m6753Hv/Midnight-Sky.png",
-            "Aluminum Snow": "https://i.ibb.co/zhPsGjhr/Aluminium-Snow.png",
-            "Frosted Cube": "https://i.ibb.co/XrgNZYjP/Frosted-Cube.png",
-            "Dry Gold": "https://i.ibb.co/1Yr4V32k/Dry-Gold.png",
-            "Night Jewl": "https://i.ibb.co/NgZrMCHQ/Night-Jewel.png",
-            "Canyon Wall": "https://i.ibb.co/ch4R0T8j/Canyon-Wall.png",
-            "Mountain Stream": "https://i.ibb.co/1jHh9xy/Mountain-Stream.png",
-            "Nautilus Blue": "https://i.ibb.co/jpRYdp6/Nautilus-Blue.png",
-            "Aloe Leaf": "https://i.ibb.co/842j044Y/Aloe-Leaf.png"
+            "Midnight Sky": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464619/Ruby_Midnight_Sky.webp",
+            "Aluminum Snow": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464606/Ruby_Aluminium_Snow.webp",
+            "Frosted Cube": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464614/Ruby_Frosted_Cube.webp",
+            "Dry Gold": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464611/Ruby_Dry_Gold.webp",
+            "Night Jewl": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464627/Ruby_Night_Jewel.webp",
+            "Canyon Wall": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464609/Ruby_Canyon_Wall.webp",
+            "Mountain Stream": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464621/Ruby_Mountain_Stream.webp",
+            "Nautilus Blue": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464624/Ruby_Nautilus_Blue.webp",
+            "Aloe Leaf": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464603/Ruby_Aloe_Leaf.webp"
         },
         allImages: [],
         options: [
@@ -276,15 +276,15 @@ const products = [
         description: "The Evie Resin Planter is a lightweight and durable planter with a size of 9cm x 10cm. Its resin material makes it resistant to UV radiation, water and wear, making it suitable for both indoor and outdoor use.",
         price: 43.00,
         images: {
-            "Midnight Sky": "https://i.ibb.co/spZkhsBH/Midnight-Sky.png",
-            "Aluminum Snow": "https://i.ibb.co/JjDzwLQx/Aluminium-Snow.png",
-            "Frosted Cube": "https://i.ibb.co/DfgFfWg9/Frosted-Cube.png",
-            "Dry Gold": "https://i.ibb.co/8L691rpt/Dry-Gold.png",
-            "Night Jewl": "https://i.ibb.co/ch0QDV5x/Night-Jewel.png",
-            "Canyon Wall": "https://i.ibb.co/YTDy3D1V/Evie-Canyon-Wall.png",
-            "Mountain Stream": "https://i.ibb.co/ccv3wzbd/Mountain-Stream.png",
-            "Nautilus Blue": "https://i.ibb.co/3y86mqD3/Nautilus-Blue.png",
-            "Aloe Leaf": "https://i.ibb.co/LXpX8QY9/Aloe-leaf.png"
+            "Midnight Sky": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464305/Evie_Midnight_Sky.webp",
+            "Aluminum Snow": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464296/Evie_Aluminium_Snow.webp",
+            "Frosted Cube": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464301/Evie_Frosted_Cube.webp",
+            "Dry Gold": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464299/Evie_Dry_Gold.webp",
+            "Night Jewl": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464310/Evie_Night_Jewel.webp",
+            "Canyon Wall": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464297/Evie_Canyon_Wall.webp",
+            "Mountain Stream": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464307/Evie_Mountain_Stream.webp",
+            "Nautilus Blue": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464308/Evie_Nautilus_Blue.webp",
+            "Aloe Leaf": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464293/Evie_Aloe_leaf.webp"
         },
         allImages: [],
         options: [
@@ -303,15 +303,15 @@ const products = [
         description: "The Amy Resin Planter is perfect for displaying your favorite plants. Crafted from a durable resin material, this 7.5cm x 8.5cm planter is designed to hold plants while providing an aesthetically pleasing look. A great addition to any indoor or outdoor garden.",
         price: 32.50,
         images: {
-            "Midnight Sky": "https://i.ibb.co/60vN7hMq/Amy-Midnight-Sky.png",
-            "Aluminum Snow": "https://i.ibb.co/vC3798h6/Amy-Aluminum-Snow.png",
-            "Frosted Cube": "https://i.ibb.co/pjXRb6Qz/Amy-White.png",
-            "Dry Gold": "https://i.ibb.co/8pVktjx/Amy-Dry-Gold.png",
-            "Night Jewl": "https://i.ibb.co/DgPt6Vyj/Amy-Night-Jewel.png",
-            "Canyon Wall": "https://i.ibb.co/23W6YNjW/Amy-Canyon-Wall.png",
-            "Mountain Stream": "https://i.ibb.co/vx2CFBr1/Amy-Mountain-Stream.png",
-            "Nautilus Blue": "https://i.ibb.co/j9wKfJP2/Amy-Nautilus-Blue.png",
-            "Aloe Leaf": "https://i.ibb.co/ycsRxFbJ/Amy-Aoe-Leaf.png"
+            "Midnight Sky": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464003/Amy_Midnight_Sky.webp",
+            "Aluminum Snow": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464000/Amy_Aluminum_Snow.webp",
+            "Frosted Cube": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464006/Amy_White.webp",
+            "Dry Gold": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464002/Amy_Dry_Gold.webp",
+            "Night Jewl": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464005/Amy_Night_Jewel.webp",
+            "Canyon Wall": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464001/Amy_Canyon_Wall.webp",
+            "Mountain Stream": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464004/Amy_Mountain_Stream.webp",
+            "Nautilus Blue": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464005/Amy_Nautilus_Blue.webp",
+            "Aloe Leaf": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464001/Amy_Aoe_Leaf.webp"
         },
         allImages: [],
         options: [
@@ -335,15 +335,15 @@ const products = [
             "Large H=80cm W=45cm L110=cm":  5316.65
         },
         images: {
-            "Midnight Sky": "https://i.ibb.co/NnFb7g6X/Midnight-Sky.png",
-            "Aluminum Snow": "https://i.ibb.co/d0pbxb0z/Aluminum-Snow.png",
-            "Frosted Cube": "https://i.ibb.co/3yh2ZYfd/Frosted-Cube.png",
-            "Dry Gold": "https://i.ibb.co/YrC1w1J/Dry-Gold.png",
-            "Night Jewl": "https://i.ibb.co/chfzrXL3/Night-Jewel.png",
-            "Canyon Wall": "https://i.ibb.co/RT7JDL9C/Canyon-Wall.png",
-            "Mountain Stream": "https://i.ibb.co/VcJCfbHr/Mountain-Stream.png",
-            "Nautilus Blue": "https://i.ibb.co/gLYzXXJr/Nautilus-Blue.png",
-            "Aloe Leaf": "https://i.ibb.co/wrYzbxBk/aloe-Leaf.png"
+            "Midnight Sky": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464078/Boston_Midnight_Sky.webp",
+            "Aluminum Snow": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464072/Boston_Aluminum_Snow.webp",
+            "Frosted Cube": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464076/Boston_Frosted_Cube.webp",
+            "Dry Gold": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464075/Boston_Dry_Gold.webp",
+            "Night Jewl": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464082/Boston_Night_Jewel.webp",
+            "Canyon Wall": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464073/Boston_Canyon_Wall.webp",
+            "Mountain Stream": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464079/Boston_Mountain_Stream.webp",
+            "Nautilus Blue": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464080/Boston_Nautilus_Blue.webp",
+            "Aloe Leaf": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464072/Boston_aloe_Leaf.webp"
         },
         allImages: [],
         options: [
@@ -371,15 +371,15 @@ const products = [
             "Large H=80cm W=45cm":  2932.50
         },
         images: {
-            "Midnight Sky": "https://i.ibb.co/FbNfxKn9/Midnight-Sky.png",
-            "Aluminum Snow": "https://i.ibb.co/Zz8MM8Vs/Aluminum-Snow.png",
-            "Frosted Cube": "https://i.ibb.co/PGB1WVL3/Frosted-Cube.png",
-            "Dry Gold": "https://i.ibb.co/tP33w2ZT/Dry-Gold.png",
-            "Night Jewl": "https://i.ibb.co/Zz5qPfMP/Night-Jewel.png",
-            "Canyon Wall": "https://i.ibb.co/M3rf7KG/Canyon-Wall.png",
-            "Mountain Stream": "https://i.ibb.co/BVPD3wx5/MOuntain-Stream.png",
-            "Nautilus Blue": "https://i.ibb.co/fY090yxX/Aloe-Leaf.png",
-            "Aloe Leaf": "https://i.ibb.co/fY090yxX/Aloe-Leaf.png"
+            "Midnight Sky": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464534/New_Yorker_Midnight_Sky.webp",
+            "Aluminum Snow": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464522/New_Yorker_Aluminum_Snow.webp",
+            "Frosted Cube": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464530/New_Yorker_Frosted_Cube.webp",
+            "Dry Gold": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464527/New_Yorker_Dry_Gold.webp",
+            "Night Jewl": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464541/New_Yorker_Night_Jewel.webp",
+            "Canyon Wall": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464525/New_Yorker_Canyon_Wall.webp",
+            "Mountain Stream": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464536/New_Yorker_MOuntain_Stream.webp",
+            "Nautilus Blue": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464539/New_Yorker_Nautilus_Blue.webp",
+            "Aloe Leaf": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464520/New_Yorker_Aloe_Leaf.webp"
         },
         allImages: [
             "https://i.ibb.co/jkXxFpdB/New-yorker.png",
@@ -409,15 +409,15 @@ const products = [
             "Large H=80cm W=38cm L=100=cm":  4805.50 
         },
         images: {
-            "Midnight Sky": "https://i.ibb.co/NnFb7g6X/Midnight-Sky.png",
-            "Aluminum Snow": "https://i.ibb.co/d0pbxb0z/Aluminum-Snow.png",
-            "Frosted Cube": "https://i.ibb.co/3yh2ZYfd/Frosted-Cube.png",
-            "Dry Gold": "https://i.ibb.co/YrC1w1J/Dry-Gold.png",
-            "Night Jewl": "https://i.ibb.co/chfzrXL3/Night-Jewel.png",
-            "Canyon Wall": "https://i.ibb.co/RT7JDL9C/Canyon-Wall.png",
-            "Mountain Stream": "https://i.ibb.co/VcJCfbHr/Mountain-Stream.png",
-            "Nautilus Blue": "https://i.ibb.co/gLYzXXJr/Nautilus-Blue.png",
-            "Aloe Leaf": "https://i.ibb.co/wrYzbxBk/aloe-Leaf.png"
+            "Midnight Sky": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464587/Paris_Midnight_Sky.webp",
+            "Aluminum Snow": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464575/Paris_Aluminum_Snow.webp",
+            "Frosted Cube": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464582/Paris_Frosted_Cube.webp",
+            "Dry Gold": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464580/Paris_Dry_Gold.webp",
+            "Night Jewl": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464596/Paris_Night_Jewel2.webp",
+            "Canyon Wall": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464577/Paris_Canyon_Wall.webp",
+            "Mountain Stream": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464589/Paris_Mountain_Stream.webp",
+            "Nautilus Blue": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464591/Paris_Nautilus_Blue.webp",
+            "Aloe Leaf": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464572/Paris_aloe_Leaf.webp"
         },
         allImages: [],
         options: [
@@ -445,15 +445,15 @@ const products = [
             "Large H=80cm W=36cm": 2474.50
         },
         images: {
-            "Midnight Sky": "https://i.ibb.co/3msZLpn5/Midnight-Sky.png",
-            "Aluminum Snow": "https://i.ibb.co/YFRFvTHC/Alluminum-Snow.png",
-            "Frosted Cube": "https://i.ibb.co/k21t8dG3/Frosted-Snow.png",
-            "Dry Gold": "https://i.ibb.co/yxxpYxY/Dry-Gold.png",
-            "Night Jewl": "https://i.ibb.co/CK924j3V/Night-Jewel.png",
-            "Canyon Wall": "https://i.ibb.co/PG4bjgpH/Canyon-Wall.png",
-            "Mountain Stream": "https://i.ibb.co/fGXmDDr5/Mountain-Stream.png",
-            "Nautilus Blue": "https://i.ibb.co/msgD9z8/Nautilus-Blue.png",
-            "Aloe Leaf": "https://i.ibb.co/j9TkG02z/Aloe-Leaf.png"
+            "Midnight Sky": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464559/Nile_Midnight_Sky.webp",
+            "Aluminum Snow": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464544/Nile_Alluminum_Snow.webp",
+            "Frosted Cube": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464554/Nile_Frosted_Snow.webp",
+            "Dry Gold": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464552/Nile_Dry_Gold.webp",
+            "Night Jewl": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464566/Nile_Night_Jewel.webp",
+            "Canyon Wall": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464549/Nile_Canyon_Wall.webp",
+            "Mountain Stream": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464561/Nile_Mountain_Stream.webp",
+            "Nautilus Blue": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464564/Nile_Nautilus_Blue.webp",
+            "Aloe Leaf": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464546/Nile_Aloe_Leaf.webp"
         },
         allImages: [],
         options: [
@@ -480,24 +480,24 @@ const products = [
             "Large H=80cm W=36cm": 4350.50
         },
         images: {
-            "Midnight Sky Plain": "https://i.ibb.co/XMkxNy3/Midnight-Sky.png",
-            "Midnight Sky Line Art": "https://i.ibb.co/5hPdRjmQ/Picsart-23-07-06-09-49-16-980.webp",
-            "Aluminum Snow Plain": "https://i.ibb.co/xK0zcqHz/Aluminum-Snow.png",
-            "Aluminum Snow Line Art": "https://i.ibb.co/5hPdRjmQ/Picsart-23-07-06-09-49-16-980.webp",
-            "Frosted Cube Plain": "https://i.ibb.co/WWRdpJSm/Frosted-Cube-png.png",
-            "Frosted Cube Line Art": "https://i.ibb.co/5hPdRjmQ/Picsart-23-07-06-09-49-16-980.webp",
-            "Dry Gold Plain": "https://i.ibb.co/ymhTMZmW/Dry-Gold.png",
-            "Dry Gold Line Art": "https://i.ibb.co/5hPdRjmQ/Picsart-23-07-06-09-49-16-980.webp",
-            "Night Jewl Plain": "https://i.ibb.co/Y76PBVp4/Picsart-23-07-27-15-07-42-541.png",
-            "Night Jewl Line Art": "https://i.ibb.co/5hPdRjmQ/Picsart-23-07-06-09-49-16-980.webp",
-            "Canyon Wall Plain": "https://i.ibb.co/93CCFLm9/Canyon-wall.png",
-            "Canyon Wall Line Art": "https://i.ibb.co/5hPdRjmQ/Picsart-23-07-06-09-49-16-980.webp",
-            "Mountain Stream Plain": "https://i.ibb.co/jkqwwPsN/Mountain-Stream.png",
-            "Mountain Stream Line Art": "https://i.ibb.co/5hPdRjmQ/Picsart-23-07-06-09-49-16-980.webp",
-            "Nautilus Blue Plain": "https://i.ibb.co/yFXGCNmP/Nautilus-Blue.png",
-            "Nautilus Blue Line Art": "https://i.ibb.co/5hPdRjmQ/Picsart-23-07-06-09-49-16-980.webp",
-            "Aloe Leaf Plain": "https://i.ibb.co/G456hbgV/Aloe-Leaf.png",
-            "Aloe Leaf Line Art": "https://i.ibb.co/5hPdRjmQ/Picsart-23-07-06-09-49-16-980.webp"
+            "Midnight Sky Plain": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464266/Everest_Midnight_Sky.webp",
+            "Midnight Sky Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp",
+            "Aluminum Snow Plain": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464257/Everest_Aluminum_Snow.webp",
+            "Aluminum Snow Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp",
+            "Frosted Cube Plain": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464263/Everest_Frosted_Cube._png.webp",
+            "Frosted Cube Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp",
+            "Dry Gold Plain": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464261/Everest_Dry_Gold.webp",
+            "Dry Gold Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp",
+            "Night Jewl Plain": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp",
+            "Night Jewl Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp",
+            "Canyon Wall Plain": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464259/Everest_Canyon_wall.webp",
+            "Canyon Wall Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp",
+            "Mountain Stream Plain": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464268/Everest_Mountain_Stream.webp",
+            "Mountain Stream Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp",
+            "Nautilus Blue Plain": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464270/Everest_Nautilus_Blue.webp",
+            "Nautilus Blue Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp",
+            "Aloe Leaf Plain": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464255/Everest_Aloe_Leaf.webp",
+            "Aloe Leaf Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp"
         },
         allImages: [],
         options: [
@@ -518,24 +518,24 @@ const products = [
             "Large H=43cm W=46.5cm": 2141.35
         },
         images: {
-            "Midnight Sky Plain": "https://i.ibb.co/8gDcRfQz/Midnight-Sky.png",
-            "Midnight Sky Line Art": "https://i.ibb.co/5hPdRjmQ/Picsart-23-07-06-09-49-16-980.webp",
-            "Aluminum Snow Plain": "https://i.ibb.co/v4PVQZGt/Aluminum-Snos.png",
-            "Aluminum Snow Line Art": "https://i.ibb.co/5hPdRjmQ/Picsart-23-07-06-09-49-16-980.webp",
-            "Frosted Cube Plain": "https://i.ibb.co/XfBNRgGR/Frosted-Cube.png",
-            "Frosted Cube Line Art": "https://i.ibb.co/5hPdRjmQ/Picsart-23-07-06-09-49-16-980.webp",
-            "Dry Gold Plain": "https://i.ibb.co/bgpn7qmC/Dry-Gold.png",
-            "Dry Gold Line Art": "https://i.ibb.co/5hPdRjmQ/Picsart-23-07-06-09-49-16-980.webp",
-            "Night Jewl Plain": "https://i.ibb.co/p6fbj9JG/Night-Jewel.png",
-            "Night Jewl Line Art": "https://i.ibb.co/5hPdRjmQ/Picsart-23-07-06-09-49-16-980.webp",
-            "Canyon Wall Plain": "https://i.ibb.co/W4XdJ0jZ/Canyon-Wall.png",
-            "Canyon Wall Line Art": "https://i.ibb.co/5hPdRjmQ/Picsart-23-07-06-09-49-16-980.webp",
-            "Mountain Stream Plain": "https://i.ibb.co/ch83gpf1/Mountain-Stream.png",
-            "Mountain Stream Line Art": "https://i.ibb.co/5hPdRjmQ/Picsart-23-07-06-09-49-16-980.webp",
+            "Midnight Sky Plain": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464809/Victoria_Midnight_Sky.webp",
+            "Midnight Sky Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp",
+            "Aluminum Snow Plain": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464795/Victoria_Aluminum_Snos.webp",
+            "Aluminum Snow Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp",
+            "Frosted Cube Plain": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464803/Victoria_Frosted_Cube.webp",
+            "Frosted Cube Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp",
+            "Dry Gold Plain": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464800/Victoria_Dry_Gold.webp",
+            "Dry Gold Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp",
+            "Night Jewl Plain": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464817/Victoria_Night_Jewel.webp",
+            "Night Jewl Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp",
+            "Canyon Wall Plain": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464797/Victoria_Canyon_Wall.webp",
+            "Canyon Wall Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp",
+            "Mountain Stream Plain": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464811/Victoria_Mountain_Stream.webp",
+            "Mountain Stream Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp",
             "Nautilus Blue Plain": "https://i.ibb.co/7NBGHqnh/Nautilus-Blue.png",
-            "Nautilus Blue Line Art": "https://i.ibb.co/5hPdRjmQ/Picsart-23-07-06-09-49-16-980.webp",
-            "Aloe Leaf Plain": "https://i.ibb.co/q3KzrFLL/Aloe-Leaf.png",
-            "Aloe Leaf Line Art": "https://i.ibb.co/5hPdRjmQ/Picsart-23-07-06-09-49-16-980.webp"
+            "Nautilus Blue Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp",
+            "Aloe Leaf Plain": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464791/Victoria_Aloe_Leaf.webp",
+            "Aloe Leaf Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp"
         },
         allImages: [],
         options: [
@@ -554,15 +554,15 @@ const products = [
         description: "The Barcelona Ceramic Planter is a one-of-a-kind, modern-style accessory for any decor. A unique-looking planter with a height of 12.5cm and a width of 34cm, it provides an eye-catching, vibrant look that adds a unique statement to any room.",
         price: 788.75,
         images: {
-            "Midnight Sky": "https://i.ibb.co/chjdLJ9n/Midnight-Sky.png",
-            "Aluminum Snow": "https://i.ibb.co/k61tB70k/Aluminum-Snow.png",
-            "Frosted Cube": "https://i.ibb.co/dsVdkSh7/Frosted-Cube.png",
-            "Dry Gold": "https://i.ibb.co/21432NZ6/Dry-Gold.png",
-            "Night Jewl": "https://i.ibb.co/NdNV5x7j/Screenshot-2023-07-09-094929.png",
-            "Canyon Wall": "https://i.ibb.co/PZ8xB9LB/Canyon-Wall.png",
-            "Mountain Stream": "https://i.ibb.co/Z6Rc5rTS/Mountain-Stream.png",
-            "Nautilus Blue": "https://i.ibb.co/WNVM6kSV/Nautilus-Blue.png",
-            "Aloe Leaf": "https://i.ibb.co/nqL0d808/Aloe-Leaf.png"
+            "Midnight Sky": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464063/Barcelona_Midnight_Sky.webp",
+            "Aluminum Snow": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464058/Barcelona_Aluminum_Snow.webp",
+            "Frosted Cube": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464061/Barcelona_Frosted_Cube.webp",
+            "Dry Gold": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464060/Barcelona_Dry_Gold.webp",
+            "Night Jewl": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464067/Barcelona_Night_J.webp",
+            "Canyon Wall": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464059/Barcelona_Canyon_Wall.webp",
+            "Mountain Stream": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464065/Barcelona_Mountain_Stream.webp",
+            "Nautilus Blue": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464066/Barcelona_Nautilus_Blue.webp",
+            "Aloe Leaf": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464057/Barcelona_Aloe_Leaf.webp"
         },
         allImages: [],
         options: [
@@ -589,15 +589,15 @@ const products = [
             "Medium": 465, // Price for medium stand
         },
         images: {
-            "Midnight Sky": "https://i.ibb.co/MyzT5yt4/Midnight-Sky.png",
-            "Aluminum Snow": "https://i.ibb.co/kVGLwHy6/Aluminum-Snow.png",
-            "Frosted Cube": "https://i.ibb.co/xKpsxWZ7/Frosted-Cube.png",
-            "Dry Gold": "https://i.ibb.co/JW2FDq1m/Dry-Gold.png",
+            "Midnight Sky": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464093/Cairo_Medium_Midnight_Sky.webp",
+            "Aluminum Snow": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464087/Cairo_Medium_Aluminum_Snow.webp",
+            "Frosted Cube": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464091/Cairo_Medium_Frosted_Cube.webp",
+            "Dry Gold": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464089/Cairo_Medium_Dry_Gold.webp",
             "Night Jewl": "https://i.ibb.co/NdNV5x7j/Screenshot-2023-07-09-094929.png",
-            "Canyon Wall": "https://i.ibb.co/Lh8p58Vh/Canyon-Wall.png",
-            "Mountain Stream": "https://i.ibb.co/S4c3dvnX/Mountain-Stream.png",
-            "Nautilus Blue": "https://i.ibb.co/7xLVwVB7/Nautilus-Blue.png",
-            "Aloe Leaf": "https://i.ibb.co/N6QvJm7X/Aloe-Leaf.png"
+            "Canyon Wall": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464088/Cairo_Medium_Canyon_Wall.webp",
+            "Mountain Stream": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464094/Cairo_Medium_Mountain_Stream.webp",
+            "Nautilus Blue": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464095/Cairo_Medium_Nautilus_Blue.webp",
+            "Aloe Leaf": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464086/Cairo_Medium_Aloe_Leaf.webp"
         },
         allImages: [],
         options: [
@@ -628,14 +628,14 @@ const products = [
             "With Stand": 465.00,  // Price for large stand
         },
         images: {
-            "Midnight Sky": "https://i.ibb.co/hFsYWqQQ/Midnight-Sky.png",
-            "Aluminum Snow": "https://i.ibb.co/jPdpXF72/Aluminum-Snow.png",
-            "Frosted Cube": "https://i.ibb.co/p6mXGxTX/Frosted-Cube.png",
-            "Dry Gold": "https://i.ibb.co/Mkb3226J/Dry-Gold.png",
+            "Midnight Sky": "https://res.cloudinary.com/eunzhgad/image/upload/v1791463970/Amazon_Midnight_Sky.webp",
+            "Aluminum Snow": "https://res.cloudinary.com/eunzhgad/image/upload/v1791463969/Amazon_Aluminum_Snow.webp",
+            "Frosted Cube": "https://res.cloudinary.com/eunzhgad/image/upload/v1791463970/Amazon_Frosted_Cube.webp",
+            "Dry Gold": "https://res.cloudinary.com/eunzhgad/image/upload/v1791463970/Amazon_Dry_Gold.webp",
             "Night Jewl": "https://i.ibb.co/NdNV5x7j/Screenshot-2023-07-09-094929.png",
-            "Canyon Wall": "https://i.ibb.co/BKwGJ48s/Canyon-Wall.png",
-            "Mountain Stream": "https://i.ibb.co/gbRRHpwj/Mountain-Stream.png",
-            "Nautilus Blue": "https://i.ibb.co/xKD2TMxZ/Nautilus-Blue.png",
+            "Canyon Wall": "https://res.cloudinary.com/eunzhgad/image/upload/v1791463970/Amazon_Canyon_Wall.webp",
+            "Mountain Stream": "https://res.cloudinary.com/eunzhgad/image/upload/v1791463971/Amazon_Mountain_Stream.webp",
+            "Nautilus Blue": "https://res.cloudinary.com/eunzhgad/image/upload/v1791463971/Amazon_Nautilus_Blue.webp",
             "Aloe Leaf": "https://res.cloudinary.com/eunzhgad/image/upload/v1791462806/Aloe_Leaf.webp"
         },
         allImages: [],

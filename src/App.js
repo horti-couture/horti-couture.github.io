@@ -8,6 +8,7 @@ import ResinPlanters from "./pages/Products/ResinPlanters";
 import MiniPlanters from "./pages/Products/MiniPlanters";
 import FiberglassPlanters from "./pages/Products/FiberglassPlanters";
 import CeramicPlanters from "./pages/Products/CeramicPlanters";
+import Accessories from "./pages/Products/Accessories";
 import ProductPage from "./pages/Products/ProductPage";
 import Cart from "./pages/cart";
 import Checkout from "./pages/Checkout";
@@ -32,6 +33,7 @@ function AppWrapper() {
         <Route path="/products/mini-planters" element={<MiniPlanters />} />
         <Route path="/products/fiberglass-planters" element={<FiberglassPlanters />} />
         <Route path="/products/ceramic-planters" element={<CeramicPlanters />} />
+        <Route path="/products/accessories" element={<Accessories />} />
         <Route path="/products/:handle" element={<ProductPage />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
