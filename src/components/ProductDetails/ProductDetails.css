@@ -93,8 +93,13 @@
 
 .product-info p {
     font-size: 20px;
-    color: #007bff;
+    color: #000;
     margin-bottom: 24px;
+}
+
+/* Keep the price blue so it stands out from the description */
+.product-info .product-price {
+    color: #007bff;
 }
 
 .product-option {
