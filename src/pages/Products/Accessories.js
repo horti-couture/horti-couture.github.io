@@ -6,14 +6,14 @@ import products from '../../data/products';
 import Footer from "../../components/Footer";
 import './Accessories.css';
 
-const ResinPlanters = () => {
+const Accessories = () => {
     const accessoriesProducts = products.filter(product => product.category === "Accessories");
 
     return (
         <div className="accessories">
-            <h1>accessories</h1>
+            <h1>Accessories</h1>
             <div className="product-list">
-                {accessories.map(product => (
+                {accessoriesProducts.map(product => (
                     <ProductCard key={product.id} product={product} />
                 ))}
             </div>
