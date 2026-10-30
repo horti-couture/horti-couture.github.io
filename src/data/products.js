@@ -108,7 +108,7 @@ const products = [
             "Aluminum Snow": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464194/Emma_Aluminum_Snow.webp",
             "Frosted Cube": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464194/Emma_Aluminum_Snow.webp",
             "Dry Gold": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464197/Emma_Dry_Gold.webp",
-            "Night Jewl": "https://i.ibb.co/tPw392Yp/Picsart-23-07-08-11-46-03-172.png",
+            "Night Jewl": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360861/image_06.webp",
             "Canyon Wall": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464196/Emma_Canyon_Wall.webp",
             "Mountain Stream": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464204/Emma_Mountain_Stream.webp",
             "Nautilus Blue": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464206/Emma_Nautilus_Blue.webp",
@@ -532,7 +532,7 @@ const products = [
             "Canyon Wall Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp",
             "Mountain Stream Plain": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464811/Victoria_Mountain_Stream.webp",
             "Mountain Stream Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp",
-            "Nautilus Blue Plain": "https://i.ibb.co/7NBGHqnh/Nautilus-Blue.png",
+            "Nautilus Blue Plain": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464814/Victoria_Nautilus_Blue.webp",
             "Nautilus Blue Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp",
             "Aloe Leaf Plain": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464791/Victoria_Aloe_Leaf.webp",
             "Aloe Leaf Line Art": "https://res.cloudinary.com/eunzhgad/image/upload/v1791804743/Picsart-23-07-06-09-49-16-980.webp"
@@ -593,7 +593,7 @@ const products = [
             "Aluminum Snow": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464087/Cairo_Medium_Aluminum_Snow.webp",
             "Frosted Cube": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464091/Cairo_Medium_Frosted_Cube.webp",
             "Dry Gold": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464089/Cairo_Medium_Dry_Gold.webp",
-            "Night Jewl": "https://i.ibb.co/NdNV5x7j/Screenshot-2023-07-09-094929.png",
+            "Night Jewl": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360861/image_06.webp",
             "Canyon Wall": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464088/Cairo_Medium_Canyon_Wall.webp",
             "Mountain Stream": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464094/Cairo_Medium_Mountain_Stream.webp",
             "Nautilus Blue": "https://res.cloudinary.com/eunzhgad/image/upload/v1791464095/Cairo_Medium_Nautilus_Blue.webp",
@@ -632,7 +632,7 @@ const products = [
             "Aluminum Snow": "https://res.cloudinary.com/eunzhgad/image/upload/v1791463969/Amazon_Aluminum_Snow.webp",
             "Frosted Cube": "https://res.cloudinary.com/eunzhgad/image/upload/v1791463970/Amazon_Frosted_Cube.webp",
             "Dry Gold": "https://res.cloudinary.com/eunzhgad/image/upload/v1791463970/Amazon_Dry_Gold.webp",
-            "Night Jewl": "https://i.ibb.co/NdNV5x7j/Screenshot-2023-07-09-094929.png",
+            "Night Jewl": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360861/image_06.webp",
             "Canyon Wall": "https://res.cloudinary.com/eunzhgad/image/upload/v1791463970/Amazon_Canyon_Wall.webp",
             "Mountain Stream": "https://res.cloudinary.com/eunzhgad/image/upload/v1791463971/Amazon_Mountain_Stream.webp",
             "Nautilus Blue": "https://res.cloudinary.com/eunzhgad/image/upload/v1791463971/Amazon_Nautilus_Blue.webp",
@@ -733,7 +733,7 @@ const products = [
         description: "This Resin Laughing Buddha statue stands 19.5cm tall and 17.5cm wide, making it perfect for displaying anywhere in your home. Its detailed features and friendly expression will be sure to delight family and friends.",
         price: 240.00,
         images: {
-            "Midnight Sky": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360861/image_19.webp",
+            "Midnight Sky": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360866/image_05.webp",
 
         },
         allImages: [],
@@ -772,7 +772,7 @@ const products = [
         description: "This 7-cm-high, 10-cm-wide Resin Tree Stump Planter is perfect for brightening up indoor and outdoor areas with small plants, succulents, and shrubs. Crafted from weather-resistant resin, it's designed to last for years with minimal care.",
         price: 65.00,
         images: {
-           "Resin Tree Stump Planter": "https://https://res.cloudinary.com/eunzhgad/image/upload/v1793360860/image_03.webp.ibb.co/cSNjs0CW/Picsart-23-07-26-15-02-35-640-1.png"
+           "Resin Tree Stump Planter": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360860/image_03.webp"
         },
         allImages: [],
         options: [
