@@ -6,7 +6,7 @@ const products = [
         description: "Add a bit of desert charm to your plants with this tall cactus pot buddy! Standing 5 cm tall and 3 cm wide, this cactus comes in a terracotta pot and features a hand-painted flower that comes in different colors at various times of the year.\n\n🌸A fun and vibrant accent for your indoor or outdoor plant pots, bringing a touch of color and personality all year round!",
         price: 35.00,
         images: {
-            "Tall Cactus": "https://i.ibb.co/V0FVWryH/10-1.png",
+            "Tall Cactus": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360865/image_38.webp",
 
         },
         allImages: [],
@@ -26,7 +26,7 @@ const products = [
         description: "This charming mini cactus in a terracotta pot is the perfect pot buddy to brighten up any plant! Standing 4 cm tall and 3 cm wide, it features a hand-painted flower that comes in different colors at various times of the year.\n\n 🌸A cute and colorful addition to your plant collection, perfect for adding a seasonal touch!",
         price: 35.00,
         images: {
-           "Short Cactus": "https://i.ibb.co/qYypvtFK/9-1.png",
+           "Short Cactus": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360865/image_37.webp",
 
         },
         allImages: [],
@@ -46,7 +46,7 @@ const products = [
         description: "Spice up your garden or plant babies with these cute little resin frogs! Perfect for popping into your plant pots with their handy wire that sticks right into the soil. They're tiny but mighty—each frog is only 2 cm tall and 3.5 cm long, making them the perfect low-maintenance garden companion.\n\n 🌿Give your plants a lil' frog friend today! 😍",
         price: 20.00,
         images: {
-           "Frog": "https://i.ibb.co/4wM4sssT/1-482a6e2b-b2c4-45a2-b7fd-21a7f6d5f3fb-1.png",
+           "Frog": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360865/image_36.webp",
 
         },
         allImages: [],
@@ -66,7 +66,7 @@ const products = [
         description: "Add a touch of whimsy to your garden or indoor plant collection with these charming resin toadstools! Standing at 3.5 cm tall and 2 cm wide, they're the perfect playful accent for any plant pot. Simply stick the wire into the soil and watch your plants take on a magical, fairy-tale vibe.\n\n ✨Brighten up your greenery with these adorable toadstools! 🌿",
         price: 25.00,
         images: {
-           "Mushroom": "https://i.ibb.co/1tmnvm60/4-5c4314b6-c7ad-4c3e-a97b-10c065564acc-1.png",
+           "Mushroom": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360865/image_35.webp",
         },
         allImages: [],
         options: [
@@ -85,7 +85,7 @@ const products = [
         description: "Bring a dash of fun and character to your garden or houseplants with these adorable resin gnome pot buddies! Standing at 4 cm tall and 2 cm wide, these cheerful little gnomes come in a variety of bright colors. Perfect for adding a quirky touch to your pots—simply stick the wire into the soil, and let these gnomes guard your greenery!\n\n 🌿Choose your favorite color or collect them all for a vibrant gnome family in your plant collection! 🌈",
         price: 50.00,
         images: {
-           "Gnome Pot Buddy": "https://i.ibb.co/sd25MMcH/7-1.png"
+           "Gnome Pot Buddy": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360865/image_34.webp"
         },
         allImages: [],
         options: [
@@ -210,7 +210,7 @@ const products = [
         handle: "tc-style-resin-planter",
         title: "TC Style Resin Planter's",
         description: "TC Style Resin Planters offer beautiful terracotta style containers with the convenience of a lightweight, durable resin construction. Available in 15cm, 8cm, 6cm, and 5cm sizes to suit any size planting requirements.",
-        price: 25,  // Default price (smallest size)
+        price: 16.35,  // Default price (smallest size)
         prices: {
             "5cm": 16.35,
             "6cm": 19.60,
@@ -328,7 +328,7 @@ const products = [
         handle: "boston-fiberglass-planter",
         title: "Boston Fiberglass Planter",
         description: "Our Boston Fiberglass Planters are the perfect way to bring life to any indoor or outdoor space. Available in three sizes, these rectangle shaped planters are made from highly durable and weather-resistant fiberglass. With this planter, you can be certain that your plants will be safe and stylish at the same time.\n\nAll our Fiberglass Planters come with liners and watering systems (liner reservoirs) for easy maintenance and plant care.",
-        price: 3679.65,  // Default price (smallest size)
+        price: 3384.35,  // Default price (smallest size)
         prices: {
             "Small H=50cm W=45cm L110=cm": 3384.35,
             "Medium H=65cm W=45cm L110=cm": 4237.50,
@@ -364,7 +364,7 @@ const products = [
         handle: "new-yorker-fiberglass-planter",
         title: "New Yorker Fiberglass Planter",
         description: "The New Yorker Fiberglass planters are ideal for both indoor and outdoor use. Offered in 3 sizes (50cm, 65cm, and 80cm high), these planters are lightweight and durable, crafted from all-weather fiberglass to withstand various weather conditions. With their modern design, these planters are perfect for any design aesthetic.\n\nAll our Fiberglass Planters come with liners and watering systems (liner reservoirs) for easy maintenance and plant care.",
-        price: 2375.75,  // Default price (smallest size)
+        price: 2254.35,  // Default price (smallest size)
         prices: {
             "Small H=50cm W=45cm": 2254.35,
             "Medium H=65cm W=45cm": 2593.35,
@@ -402,7 +402,7 @@ const products = [
         handle: "paris-fiberglass-planter",
         title: "Paris Fiberglass Planter",
         description: "Lightweight and durable, these Paris Fiberglass Planters are constructed with a high-quality fiberglass material, making them suitable for interior and exterior use. Their sleek, contemporary design will serve as a stylish accent to any space. The planters are available in 3 sizes.\n\nAll our Fiberglass Planters come with liners and watering systems (liner reservoirs) for easy maintenance and plant care.",
-        price: 3460.65,  // Default price (smallest size)
+        price: 3050.00,  // Default price (smallest size)
         prices: {
             "Small H=50cm W=38cm L=100=cm": 3050.00,
             "Medium H=65cm W=38cm L=100=cm": 3815.75,
@@ -438,7 +438,7 @@ const products = [
         handle: "nile-fiberglass-planter",
         title: "Nile Fiberglass Planter",
         description: "The Nile Fiberglass Planters offer a sleek, modern aesthetic and come with the convenience of being available in 3 sizes. The fiberglass material ensures the planters are strong and durable, and they're also lightweight. Create your own outdoor oasis with these stylish and timeless planters.\n\nAll our Fiberglass Planters come with liners and watering systems (liner reservoirs) for easy maintenance and plant care.",
-        price: 1911.66,  // Default price (smallest size)
+        price: 2034.00,  // Default price (smallest size)
         prices: {
             "Small H=50cm W=36cm": 2034.00,
             "Medium H=65cm W=36cm": 2254.35,
@@ -474,7 +474,7 @@ const products = [
         handle: "everest-fiberglass-planter",
         title: "Everest Fiberglass Planter",
         description: "Elevate your outdoor space with the stylish Everest Fiberglass Planters. Perfect for larger plants, these lightweight planters come in two sizes: large (H=75cm, W=73cm) and small (H=60cm, W=73cm). Whether you're looking for a subtle accent or an eye-catching focal point, Everest planters will make any greenery and patio design stand out.\n\nFor line art options, after placing an order, a sales agent will contact you to discuss color choices. Please specify your preferred top coat color when placing your order.\n\nAll our Fiberglass Planters come with liners and watering systems (liner reservoirs) for easy maintenance and plant care.",
-        price: 3246.50,  
+        price: 3926.75,  
         prices: {
             "Medium H=65cm W=36cm": 3926.75,
             "Large H=80cm W=36cm": 4350.50
@@ -512,7 +512,7 @@ const products = [
         handle: "victoria-fiberglass-planter",
         title: "Victoria Fiberglass Planter",
         description: "Enjoy a modern look outdoors with these stylish fiberglass Victoria planters. Choose between the Large Victoria, measuring 43cm high by 46.5cm wide, or the Medium Victoria, measuring 36cm high by 39.5cm wide. These sleek planters will provide an elegant touch to your home's exterior.\n\nFor line art options, after placing an order, a sales agent will contact you to discuss color choices. Please specify your preferred top coat color when placing your order.\n\nAll our Fiberglass Planters come with liners and watering systems (liner reservoirs) for easy maintenance and plant care.",
-        price: 3246.50,  
+        price: 1495.00,  
         prices: {
             "Medium H=36cm x W=39.5cm": 1495.00,
             "Large H=43cm W=46.5cm": 2141.35
@@ -579,7 +579,7 @@ const products = [
         handle: "cairo-ceramic-planter",
         title: "Cairo Ceramic Planter",
         description: "Cairo Ceramic Planters are the perfect addition to any indoor or outdoor garden. These planters are available in two sizes and come with or without wooden stands. Durable ceramic construction and a range of sizes ensure that you can find the perfect planter for any gardening occasion.",
-        price: 500.00,  // Base price without stand
+        price: 536.75,  // Base price without stand
         prices: {
             "Small": 536.75,
             "Medium": 615.85,
@@ -660,7 +660,7 @@ const products = [
         description: "This beautiful Resin Buddha Candle Holder is perfect for adding a spiritual touch to your home. With a 19.5cm height and 13cm width, this holder is the perfect size to fit any decoration. Crafted from high-quality resin, it is sure to last for years to come.",
         price: 325.00,
         images: {
-           "Buddha Candle Holder": "https://i.ibb.co/9992d7P0/Picsart-23-07-26-14-42-19-795-1.png"
+           "Buddha Candle Holder": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360864/image_33.webp"
         },
         allImages: [],
         options: [
@@ -679,15 +679,15 @@ const products = [
         description: "Elevate your space with our exquisite Resin Holding Hands Sculpture, an artful representation of connection and support. This captivating piece features two hands gently cupped together, forming a serene and inviting cradle.\n\nAvailable in a spectrum of stunning colors from our store's collection, this versatile sculpture can seamlessly blend into any decor style, making it a perfect addition to your home or office.",
         price: 195.00,
         images: {
-            "Midnight Sky": "https://i.ibb.co/sdZdxvS6/Midnight-Sky-Hands2.png",
-            "Aluminum Snow": "https://i.ibb.co/8DxSy21Q/Aluminum-Snow-Hands2.png",
-            "Frosted Cube": "https://i.ibb.co/kVP4KC7M/Frosted-Cube-Hands2.png",
-            "Dry Gold": "https://i.ibb.co/8gWjmmZK/Dry-Gold-Hands2.png",
-            "Night Jewl": "https://i.ibb.co/3mf52rv7/Night-Jewel-Hands2.png",
-            "Canyon Wall": "https://i.ibb.co/jFbRCzr/Terra-Cotta-Hands2.png",
-            "Mountain Stream": "https://i.ibb.co/BV2WNPmF/Mountain-Stream-Hands2.png",
-            "Nautilus Blue": "https://i.ibb.co/nsXR4sDK/Nautilus-Blue-Hands2.png",
-            "Aloe Leaf": "https://i.ibb.co/14RSkvY/Aloe-Leaf-Hands2.png"
+            "Midnight Sky": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360863/image_27.webp",
+            "Aluminum Snow": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360864/image_30.webp",
+            "Frosted Cube": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360863/image_28.webp",
+            "Dry Gold": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360864/image_29.webp",
+            "Night Jewl": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360863/image_24.webp",
+            "Canyon Wall": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360864/image_31.webp",
+            "Mountain Stream": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360863/image_26.webp",
+            "Nautilus Blue": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360863/image_25.webp",
+            "Aloe Leaf": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360864/image_32.webp"
         },
         allImages: [],
         options: [
@@ -706,15 +706,15 @@ const products = [
         description: "Add a touch of love and elegance to your home with our Heart-Shaped Resin Container. This beautifully crafted piece is more than just a container—it's a symbol of affection and style. Whether you're looking to plant your favorite small succulents or store cherished jewelry, this versatile container meets your needs with grace.",
         price: 58.00,
         images: {
-            "Midnight Sky": "https://i.ibb.co/1tpWRzxY/Midnight-Sky-Heart.png",
-            "Aluminum Snow": "https://i.ibb.co/4ZSXZXWY/Aluminum-Snow-Heart.png",
-            "Frosted Cube": "https://i.ibb.co/23gQsnJW/Frosted-Cube-heart.png",
-            "Dry Gold": "https://i.ibb.co/8Dxfrmnn/Dry-Gold-heart.png",
-            "Night Jewl": "https://i.ibb.co/CpPnJgtp/Night-Jewel-Heart.png",
-            "Canyon Wall": "https://i.ibb.co/DD7Z37DR/canyon-wall-heart.png",
-            "Mountain Stream": "https://i.ibb.co/JwT8sZRW/Mountain-Stream-Heart.png",
-            "Nautilus Blue": "https://i.ibb.co/Xrz9vy1D/Nautilus-Blue-Heart.png",
-            "Aloe Leaf": "https://i.ibb.co/ccJJZ4rt/Aloe-Leaf-heart.png"
+            "Midnight Sky": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360863/image_23.webp",
+            "Aluminum Snow": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360861/image_18.webp",
+            "Frosted Cube": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360860/image_15.webp",
+            "Dry Gold": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360860/image_16.webp",
+            "Night Jewl": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360862/image_20.webp",
+            "Canyon Wall": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360860/image_17.webp",
+            "Mountain Stream": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360862/image_22.webp",
+            "Nautilus Blue": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360862/image_21.webp",
+            "Aloe Leaf": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360861/image_19.webp"
         },
         allImages: [],
         options: [
@@ -733,21 +733,14 @@ const products = [
         description: "This Resin Laughing Buddha statue stands 19.5cm tall and 17.5cm wide, making it perfect for displaying anywhere in your home. Its detailed features and friendly expression will be sure to delight family and friends.",
         price: 240.00,
         images: {
-            "Midnight Sky": "https://i.ibb.co/JjdryqpW/Picsart-23-07-26-14-36-27-735.png",
-            "Aluminum Snow": "https://i.ibb.co/sJqwPf21/Aluminium-Snow.png",
-            "Frosted Cube": "https://i.ibb.co/1JPp2Kww/Frosted-Cube.jpg",
-            "Dry Gold": "https://i.ibb.co/ynTS1WR0/Dry-Gold.png",
-            "Night Jewl": "https://i.ibb.co/99tWmDNK/Night-Jewl.png",
-            "Canyon Wall": "https://i.ibb.co/xt55tjdb/Canyon-Wall.png",
-            "Mountain Stream": "https://i.ibb.co/nMcN1q9c/Mountain-Stream.png",
-            "Nautilus Blue": "https://i.ibb.co/4Z4bR92t/Nautilus-Blue.png",
-            "Aloe Leaf": "https://i.ibb.co/R4CjkTbJ/Aloe-Leaf.png"
+            "Midnight Sky": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360861/image_19.webp",
+
         },
         allImages: [],
         options: [
             {
                 name: "Color",
-                values: ["Midnight Sky", "Aluminum Snow", "Frosted Cube", "Dry Gold", "Night Jewl", "Canyon Wall", "Mountain Stream", "Nautilus Blue", "Aloe Leaf"]
+                values: ["Midnight Sky"]
             }
         ],
         category: "Mini Planters"
@@ -760,7 +753,7 @@ const products = [
         description: "This beautiful resin Buddha Head stands 23.5cm tall and is 12cm wide, with a stunningly detailed finish. Crafted with exquisite care, it is the perfect addition to any home - bringing peace and tranquility to your interior space.",
         price: 325.00,
         images: {
-           "Resin Buddha Head": "https://cdn.shopify.com/s/files/1/0793/4463/2097/files/Picsart_23-07-26_14-38-57-684.png?v=1694974259"
+           "Resin Buddha Head": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360861/image_04.webp"
         },
         allImages: [],
         options: [
@@ -779,7 +772,7 @@ const products = [
         description: "This 7-cm-high, 10-cm-wide Resin Tree Stump Planter is perfect for brightening up indoor and outdoor areas with small plants, succulents, and shrubs. Crafted from weather-resistant resin, it's designed to last for years with minimal care.",
         price: 65.00,
         images: {
-           "Resin Tree Stump Planter": "https://i.ibb.co/cSNjs0CW/Picsart-23-07-26-15-02-35-640-1.png"
+           "Resin Tree Stump Planter": "https://https://res.cloudinary.com/eunzhgad/image/upload/v1793360860/image_03.webp.ibb.co/cSNjs0CW/Picsart-23-07-26-15-02-35-640-1.png"
         },
         allImages: [],
         options: [
@@ -798,7 +791,7 @@ const products = [
         description: "This Resin Excited Groot Mini Planter is a perfect addition to your home or office. It stands 14cm high and measures 15cm wide, making it a great feature piece that won't take up too much space. With the groot-shaped design, you can add a splash of life to any room.",
         price: 220.00,
         images: {
-           "Resin Excited Groot Mini Planter": "https://i.ibb.co/T58MrPm/Picsart-23-07-26-15-03-48-184-1.png"
+           "Resin Excited Groot Mini Planter": "https://i.ibb.co/T58MrPm/Picsart-23-07-26-15-03-48-184-https://res.cloudinary.com/eunzhgad/image/upload/v1793360860/image_02.webp"
         },
         allImages: [],
         options: [
@@ -817,7 +810,7 @@ const products = [
         description: "This Resin Folded Arms Groot Mini Planter is the perfect size for your indoor plants. At 14cm high and 11cm wide, it's small enough to fit on a windowsill or desk, but large enough to make an impression. Made of durable resin, this stylish planter is designed to last.",
         price: 220.00,
         images: {
-           "Resin Folded Arms Groot Mini Planter": "https://i.ibb.co/wN5BzwkY/Picsart-23-07-26-15-06-17-227-1.png"
+           "Resin Folded Arms Groot Mini Planter": "https://res.cloudinary.com/eunzhgad/image/upload/v1793360860/image_01.webp"
         },
         allImages: [],
         options: [
@@ -845,6 +838,7 @@ const products = [
             "Black": "https://res.cloudinary.com/eunzhgad/image/upload/v1793346717/1.webp",
         },
         allImages: [
+            "https://res.cloudinary.com/eunzhgad/image/upload/v1793346717/1.webp",
             "https://res.cloudinary.com/eunzhgad/image/upload/v1793346717/2.webp",
             "https://res.cloudinary.com/eunzhgad/image/upload/v1793346718/photo1.webp",
         ],
