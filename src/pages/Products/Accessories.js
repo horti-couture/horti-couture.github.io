@@ -13,7 +13,7 @@ const ResinPlanters = () => {
         <div className="accessories">
             <h1>accessories</h1>
             <div className="product-list">
-                {resinProducts.map(product => (
+                {accessories.map(product => (
                     <ProductCard key={product.id} product={product} />
                 ))}
             </div>
