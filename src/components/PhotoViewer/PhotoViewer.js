@@ -23,12 +23,15 @@ import miniplantersPhoto2 from '../../assets/Miniplanterspics/photo2.jpeg';
 import miniplantersPhoto3 from '../../assets/Miniplanterspics/photo3.jpeg';
 import miniplantersPhoto4 from '../../assets/Miniplanterspics/photo4.jpeg';
 
+import accessoriesPhoto1 from '../../assets/Accessories/photo1.png';
+
 // Image sets for different product categories
 const imageSets = {
   Resin: [resinPhoto1, resinPhoto2, resinPhoto3, resinPhoto4],
   Fiberglass: [fiberglassPhoto1, fiberglassPhoto2, fiberglassPhoto3, fiberglassPhoto4],
   Ceramic: [ceramicPhoto1, ceramicPhoto2, ceramicPhoto3, ceramicPhoto4],
   Miniplanters: [miniplantersPhoto1, miniplantersPhoto2, miniplantersPhoto3, miniplantersPhoto4],
+  Accessories: [accessoriesPhoto1],
 };
 
 const PhotoViewer = ({ category }) => {
@@ -40,17 +43,26 @@ const PhotoViewer = ({ category }) => {
   const handleNext = () => setCurrentIndex((prev) => (prev + 1) % images.length);
   const handlePrev = () => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
 
+  const label = category === 'Accessories' ? 'Accessories' : `${category} Planter`;
+  const hasMultiple = images.length > 1;
+
   return (
     <div className="photo-viewer">
-      <h2>{category} Planter Photos</h2>
+      <h2>{label} Photos</h2>
       <div className="photo-container">
-        <button onClick={handlePrev} className="nav-button">&lt;</button>
-        <img src={images[currentIndex]} alt={`${category} Planter`} className="photo" />
-        <button onClick={handleNext} className="nav-button">&gt;</button>
+        {hasMultiple && (
+          <button onClick={handlePrev} className="nav-button">&lt;</button>
+        )}
+        <img src={images[currentIndex]} alt={label} className="photo" />
+        {hasMultiple && (
+          <button onClick={handleNext} className="nav-button">&gt;</button>
+        )}
       </div>
-      <div className="photo-counter">
-        {currentIndex + 1} / {images.length}
-      </div>
+      {hasMultiple && (
+        <div className="photo-counter">
+          {currentIndex + 1} / {images.length}
+        </div>
+      )}
     </div>
   );
 };

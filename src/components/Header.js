@@ -28,6 +28,7 @@ const Header = () => {
                     <li><Link to="/products/fiberglass-planters">Fiberglass Planters</Link></li>
                     <li><Link to="/products/ceramic-planters">Ceramic Planters</Link></li>
                     <li><Link to="/products/mini-planters">Mini Planters</Link></li>
+                    <li><Link to="/products/accessories">Accessories</Link></li>
                     <li><Link to="/services">Services</Link></li>
                     <li><Link to="/bookings">Bookings</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
